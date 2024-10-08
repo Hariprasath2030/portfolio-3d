@@ -5,10 +5,4 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
 })
-export default {
-  build: {
-    rollupOptions: {
-      external: ['/src/assets/web.png'],
-    },
-  },
-};
+

@@ -2,7 +2,7 @@ import hari from "./hari.png";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
-import web from "./web.png";  // Changed this to use a relative path
+import web from "./tech/web.png";  // Changed this to use a relative path
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
