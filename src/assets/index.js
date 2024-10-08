@@ -6,7 +6,7 @@ import web from "./tech/web.png";  // Changed this to use a relative path
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
-
+import port from "./port.jpg";
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
@@ -32,6 +32,7 @@ import portfolio from "./portfolio.png";
 
 export {
   hari,
+  port,
   backend,
   creator,
   mobile,

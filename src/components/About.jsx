@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
-
+import {port} from "../assets/index"
 import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
@@ -64,7 +64,7 @@ const About = () => {
   className="mt-8 md:mt-0 md:w-1/2 flex justify-center"
 >
   <img
-    src="/src/assets/port.jpg"
+    src= {port} 
     alt="About"
     className="w-64 h-64 object-cover rounded-2xl"
   />
