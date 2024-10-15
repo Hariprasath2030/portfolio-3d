@@ -139,7 +139,7 @@ const experiences = [
   company_name: "Java", // Replace with the actual company name
   icon: java, // Use an appropriate icon for Java
   iconBg: "#383E56",
-  date: "Jan 2024 - 2023",
+  date: "Jan 2024 - Present",
   points: [
     "Developed and maintained web applications using Java and related technologies.",
     "Collaborated with cross-functional teams, including designers, product managers, and other developers, to create high-quality backend solutions.",
