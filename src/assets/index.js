@@ -29,6 +29,7 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import todo from "./todo.png";
 import portfolio from "./portfolio.png";
+import smartretail from "./smart-retail.png";
 
 export {
   hari,
@@ -61,4 +62,5 @@ export {
   mern,
   mysql,
   portfolio,
+  smartretail
 };

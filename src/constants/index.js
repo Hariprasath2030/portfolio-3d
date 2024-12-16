@@ -23,6 +23,7 @@ import {
   mern,
   mysql,
   portfolio,
+  smartretail
 } from "../assets";
 
 export const navLinks = [
@@ -230,7 +231,7 @@ const projects = [
     source_code_link: "https://github.com/Hariprasath2030/Restaurant-management-system",
   },
   {
-    name: "GRADE CRAFT (WEB APPLICTAION STUDENT PERFORMANCE)",
+    name: "GRADE CRAFT",
     description:
       "GradeCraft addresses the critical need for enhanced incident analysis and proactive safety management in educational institutions. As the aviation industry strives to maintain optimal safety amidst increasing complexities, GradeCraft offers a platform tailored for educators and administrative staff.",
     tags: [
@@ -332,6 +333,35 @@ const projects = [
     ],
     "image": portfolio,
     "source_code_link": "https://github.com/Hariprasath2030/portfolio-3d"
+  },
+  {
+    name: "Smart Retail Hub",
+    description: 
+      "Smart Retail Hub is an integrated system designed to optimize inventory management through automation and real-time monitoring. It streamlines retail operations by combining automated checkout, sales tracking, and customer engagement.",
+      tags: [
+        {
+          name: "Reactjs",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Tailwindcss",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Nodejs",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Expressjs",
+          color: "orange-text-gradient",
+        },
+        {
+          name: "Mongodb",
+          color: "White-text-gradient",
+        },
+    ],
+    "image": smartretail,
+    "source_code_link": "https://github.com/Hariprasath2030/Retail-Hub-client"
   }
   
    
