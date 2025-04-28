@@ -58,8 +58,8 @@ const services = [
     title: "Content Creator",
     icon: creator,
   },
- 
-  
+
+
 ];
 
 const technologies = [
@@ -115,8 +115,8 @@ const technologies = [
     name: "Java",
     icon: java,
   },
-  
- 
+
+
 ];
 
 const experiences = [
@@ -127,57 +127,57 @@ const experiences = [
     iconBg: "#383E56",
     date: "June 2023 - April 2024",
     points: [
-        "Technologies: HTML, CSS, JavaScript, PHP",
-        "Built and maintained dynamic websites utilizing HTML, CSS, and JavaScript frameworks, ensuring intuitive user interfaces through collaboration with UI/UX designers.",
-        "Developed and maintained web applications with PHP and XAMPP, implementing RESTful APIs for seamless front-end integration.",
-        "Ensured website responsiveness and optimized performance across various devices, while focusing on application performance, security, and scalability.",
-        "Conducted unit tests and debugging to uphold high-quality standards; participated in code reviews and provided constructive feedback to enhance code quality and efficiency."
+      "Technologies: HTML, CSS, JavaScript, PHP",
+      "Built and maintained dynamic websites utilizing HTML, CSS, and JavaScript frameworks, ensuring intuitive user interfaces through collaboration with UI/UX designers.",
+      "Developed and maintained web applications with PHP and XAMPP, implementing RESTful APIs for seamless front-end integration.",
+      "Ensured website responsiveness and optimized performance across various devices, while focusing on application performance, security, and scalability.",
+      "Conducted unit tests and debugging to uphold high-quality standards; participated in code reviews and provided constructive feedback to enhance code quality and efficiency."
     ],
-},
+  },
 
-{
-  title: "Problem Solving (Java)",
-  company_name: "Java", // Replace with the actual company name
-  icon: java, // Use an appropriate icon for Java
-  iconBg: "#383E56",
-  date: "Jan 2024 - Present",
-  points: [
-    "Developed and maintained web applications using Java and related technologies.",
-    "Collaborated with cross-functional teams, including designers, product managers, and other developers, to create high-quality backend solutions.",
-    "Implemented RESTful APIs and ensured seamless integration with front-end technologies.",
-    "Participated in code reviews and provided constructive feedback to other developers to enhance code quality and efficiency.",
-    "Optimized application performance, security, and scalability by following best practices in Java development.",
-  ],
-},
-{
-  title: "Advanced MERN Development",
-  company_name: "Infosys Springboard",
-  icon: mern, // You can replace 'reactjs' with the appropriate icon source
-  iconBg: "#E6DEDD", // Background color for the icon
-  date: "September 2024 - october 2024",
-  points: [
-    "Developing and maintaining web applications using React.js, Node.js, and Express.js, ensuring high performance and responsiveness.",
-    "Collaborating with cross-functional teams, including UI/UX designers and product managers, to translate business requirements into technical specifications and deliver high-quality products.",
-    "Implementing responsive design principles and ensuring cross-browser compatibility, resulting in an optimal user experience across various devices and platforms.",
-    "Conducting code reviews and providing constructive feedback to team members, fostering a culture of continuous improvement and knowledge sharing within the development team.",
-    "Integrating RESTful APIs and third-party services, enhancing the functionality and performance of web applications."
-  ],
-},
-{
-  title: "Spring Boot Development",
-  company_name: "Infosys Springboard",
-  icon: git, // You can replace 'reactjs' with the appropriate icon source related to Spring Boot
-  iconBg: "#E6DEDD", // Background color for the icon
-  date: "October 2024 - Present",
-  points: [
-    "Developing and maintaining enterprise-level applications using Spring Boot, ensuring scalability, performance, and security.",
-    "Designing RESTful APIs to facilitate seamless communication between front-end and back-end systems, optimizing data retrieval and processing.",
-    "Collaborating with cross-functional teams, including database administrators and DevOps engineers, to deploy applications in cloud environments and maintain CI/CD pipelines.",
-    "Implementing Spring Security to enhance application security through user authentication and authorization, ensuring data protection.",
-    "Conducting unit testing and integration testing using JUnit and Mockito to ensure code quality and reliability.",
-    "Participating in agile ceremonies, such as sprint planning and retrospectives, to ensure timely delivery of features and continuous improvement of development processes."
-  ],
-}
+  {
+    title: "Problem Solving (Java)",
+    company_name: "Java", // Replace with the actual company name
+    icon: java, // Use an appropriate icon for Java
+    iconBg: "#383E56",
+    date: "Jan 2024 - Present",
+    points: [
+      "Developed and maintained web applications using Java and related technologies.",
+      "Collaborated with cross-functional teams, including designers, product managers, and other developers, to create high-quality backend solutions.",
+      "Implemented RESTful APIs and ensured seamless integration with front-end technologies.",
+      "Participated in code reviews and provided constructive feedback to other developers to enhance code quality and efficiency.",
+      "Optimized application performance, security, and scalability by following best practices in Java development.",
+    ],
+  },
+  {
+    title: "Advanced MERN Development",
+    company_name: "Infosys Springboard",
+    icon: mern, // You can replace 'reactjs' with the appropriate icon source
+    iconBg: "#E6DEDD", // Background color for the icon
+    date: "September 2024 - october 2024",
+    points: [
+      "Developing and maintaining web applications using React.js, Node.js, and Express.js, ensuring high performance and responsiveness.",
+      "Collaborating with cross-functional teams, including UI/UX designers and product managers, to translate business requirements into technical specifications and deliver high-quality products.",
+      "Implementing responsive design principles and ensuring cross-browser compatibility, resulting in an optimal user experience across various devices and platforms.",
+      "Conducting code reviews and providing constructive feedback to team members, fostering a culture of continuous improvement and knowledge sharing within the development team.",
+      "Integrating RESTful APIs and third-party services, enhancing the functionality and performance of web applications."
+    ],
+  },
+  {
+    title: "Spring Boot Development",
+    company_name: "Infosys Springboard",
+    icon: git, // You can replace 'reactjs' with the appropriate icon source related to Spring Boot
+    iconBg: "#E6DEDD", // Background color for the icon
+    date: "October 2024 - Present",
+    points: [
+      "Developing and maintaining enterprise-level applications using Spring Boot, ensuring scalability, performance, and security.",
+      "Designing RESTful APIs to facilitate seamless communication between front-end and back-end systems, optimizing data retrieval and processing.",
+      "Collaborating with cross-functional teams, including database administrators and DevOps engineers, to deploy applications in cloud environments and maintain CI/CD pipelines.",
+      "Implementing Spring Security to enhance application security through user authentication and authorization, ensuring data protection.",
+      "Conducting unit testing and integration testing using JUnit and Mockito to ensure code quality and reliability.",
+      "Participating in agile ceremonies, such as sprint planning and retrospectives, to ensure timely delivery of features and continuous improvement of development processes."
+    ],
+  }
 
 ];
 
@@ -311,60 +311,150 @@ const projects = [
   },
   {
     name: "Portfolio",
-    description: 
+    description:
       "This project is a personal portfolio website showcasing various web applications, including all projects, experience, about, contact details, skills, etc.It highlights my technical skills in full-stack development and offers a platform for users to explore my work and projects.",
-      tags: [
-        {
-          name: "Reactjs",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "Tailwindcss",
-          color: "green-text-gradient",
-        },
-        {
-          name: "Threejs",
-          color: "pink-text-gradient",
-        },
-        {
-          name: "Framer Motion",
-          color: "orange-text-gradient",
-        },
+    tags: [
+      {
+        name: "Reactjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Tailwindcss",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Threejs",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Framer Motion",
+        color: "orange-text-gradient",
+      },
     ],
     "image": portfolio,
     "source_code_link": "https://github.com/Hariprasath2030/portfolio-3d"
   },
   {
     name: "Smart Retail Hub",
-    description: 
+    description:
       "Smart Retail Hub is an integrated system designed to optimize inventory management through automation and real-time monitoring. It streamlines retail operations by combining automated checkout, sales tracking, and customer engagement.",
-      tags: [
-        {
-          name: "Reactjs",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "Tailwindcss",
-          color: "green-text-gradient",
-        },
-        {
-          name: "Nodejs",
-          color: "pink-text-gradient",
-        },
-        {
-          name: "Expressjs",
-          color: "orange-text-gradient",
-        },
-        {
-          name: "Mongodb",
-          color: "White-text-gradient",
-        },
+    tags: [
+      {
+        name: "Reactjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Tailwindcss",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Nodejs",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Expressjs",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Mongodb",
+        color: "White-text-gradient",
+      },
     ],
     "image": smartretail,
-    "source_code_link": "https://github.com/Hariprasath2030/Retail-Hub-client"
+    "source_code_link": "https://github.com/Hariprasath2030/Retail-Hub-client",
+    "live_demo_link": "https://retail-hub-client.vercel.app/"
+  },
+  {
+    name: "Budget Bloom",
+    description:
+      "Smart Retail Hub is an integrated system designed to optimize inventory management through automation and real-time monitoring. It streamlines retail operations by combining automated checkout, sales tracking, and customer engagement.",
+    tags: [
+      {
+        name: "Reactjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Tailwindcss",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Nodejs",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Expressjs",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Mongodb",
+        color: "White-text-gradient",
+      },
+    ],
+    "image": smartretail,
+    "source_code_link": "https://github.com/Hariprasath2030/Retail-Hub-client",
+    "live_demo_link": "https://retail-hub-client.vercel.app/"
+  },
+  {
+    name: "Smart Retail Hub",
+    description:
+      "Smart Retail Hub is an integrated system designed to optimize inventory management through automation and real-time monitoring. It streamlines retail operations by combining automated checkout, sales tracking, and customer engagement.",
+    tags: [
+      {
+        name: "Reactjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Tailwindcss",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Nodejs",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Expressjs",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Mongodb",
+        color: "White-text-gradient",
+      },
+    ],
+    "image": smartretail,
+    "source_code_link": "https://github.com/Hariprasath2030/Retail-Hub-client",
+    "live_demo_link": "https://retail-hub-client.vercel.app/"
+  },
+  {
+    name: "Smart Retail Hub",
+    description:
+      "Smart Retail Hub is an integrated system designed to optimize inventory management through automation and real-time monitoring. It streamlines retail operations by combining automated checkout, sales tracking, and customer engagement.",
+    tags: [
+      {
+        name: "Reactjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Tailwindcss",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Nodejs",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Expressjs",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Mongodb",
+        color: "White-text-gradient",
+      },
+    ],
+    "image": smartretail,
+    "source_code_link": "https://github.com/Hariprasath2030/Retail-Hub-client",
+    "live_demo_link": "https://retail-hub-client.vercel.app/"
   }
-  
-   
+
 ];
 
 export { services, technologies, experiences, testimonials, projects };
