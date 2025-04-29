@@ -28,23 +28,23 @@ const Hero = () => {
 
       <ComputersCanvas />
 
-      <div className='absolute xs:bottom-10 bottom-20 sm:bottom-32 w-full flex justify-center items-center'>
+      {/* <div className='absolute xs:bottom-10 bottom-20 sm:bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>
           <div className='w-[28px] h-[54px] sm:w-[35px] sm:h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
-            <motion.div
-              animate={{
-                y: [0, 24, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              className='w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-secondary mb-1'
-            />
+              <motion.div
+                animate={{
+                  y: [0, 24, 0],
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                }}
+                className='w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-secondary mb-1'
+              />
           </div>
         </a>
-      </div>
+      </div> */}
     </section>
   );
 };

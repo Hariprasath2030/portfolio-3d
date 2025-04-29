@@ -45,7 +45,7 @@ const Navbar = () => {
           <img src={hari} alt='hari' className='w-9 h-9 object-contain' />
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
             Hariprasath &nbsp;
-            <span className='sm:block hidden'> | A FULL STACK WEB DEVELOPER</span>
+            <span className='sm:block hidden'> | A MERN STACK WEB DEVELOPER</span>
           </p>
         </Link>
 

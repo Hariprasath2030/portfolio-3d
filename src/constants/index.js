@@ -16,14 +16,14 @@ import {
   docker,
   carrent,
   jobit,
-  tripguide,
-  todo,
   threejs,
   java,
   mern,
   mysql,
-  portfolio,
-  smartretail
+  smartretail,
+  budgetbloom,
+  festbook,
+  healthcare
 } from "../assets";
 
 export const navLinks = [
@@ -47,7 +47,7 @@ const services = [
     icon: web,
   },
   {
-    title: "React  Developer",
+    title: "React Developer",
     icon: mobile,
   },
   {
@@ -115,8 +115,6 @@ const technologies = [
     name: "Java",
     icon: java,
   },
-
-
 ];
 
 const experiences = [
@@ -132,21 +130,6 @@ const experiences = [
       "Developed and maintained web applications with PHP and XAMPP, implementing RESTful APIs for seamless front-end integration.",
       "Ensured website responsiveness and optimized performance across various devices, while focusing on application performance, security, and scalability.",
       "Conducted unit tests and debugging to uphold high-quality standards; participated in code reviews and provided constructive feedback to enhance code quality and efficiency."
-    ],
-  },
-
-  {
-    title: "Problem Solving (Java)",
-    company_name: "Java", // Replace with the actual company name
-    icon: java, // Use an appropriate icon for Java
-    iconBg: "#383E56",
-    date: "Jan 2024 - Present",
-    points: [
-      "Developed and maintained web applications using Java and related technologies.",
-      "Collaborated with cross-functional teams, including designers, product managers, and other developers, to create high-quality backend solutions.",
-      "Implemented RESTful APIs and ensured seamless integration with front-end technologies.",
-      "Participated in code reviews and provided constructive feedback to other developers to enhance code quality and efficiency.",
-      "Optimized application performance, security, and scalability by following best practices in Java development.",
     ],
   },
   {
@@ -174,39 +157,11 @@ const experiences = [
       "Designing RESTful APIs to facilitate seamless communication between front-end and back-end systems, optimizing data retrieval and processing.",
       "Collaborating with cross-functional teams, including database administrators and DevOps engineers, to deploy applications in cloud environments and maintain CI/CD pipelines.",
       "Implementing Spring Security to enhance application security through user authentication and authorization, ensuring data protection.",
-      "Conducting unit testing and integration testing using JUnit and Mockito to ensure code quality and reliability.",
-      "Participating in agile ceremonies, such as sprint planning and retrospectives, to ensure timely delivery of features and continuous improvement of development processes."
     ],
   }
 
 ];
 
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
 
 const projects = [
   {
@@ -260,81 +215,6 @@ const projects = [
     source_code_link: "https://github.com/Hariprasath2030/Student-performance-system",
   },
   {
-    name: "Todo-1",
-    description:
-      "The ToDo Project using MERN Stack is a full-stack web application designed to help users manage tasks efficiently. Built using the MERN (MongoDB, Express.js, React, Node.js) stack, the project enables users to add, edit, and delete tasks in real time.",
-    tags: [
-      {
-        name: "Mongodb",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Nodejs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Expressjs",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Reactjs",
-        color: "orange-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/Hariprasath2030/todo",
-  },
-  {
-    name: "Todo-2",
-    description:
-      "The ToDo Project using Spring Boot is a full-stack web application designed to help users manage tasks efficiently. Built using the (Spring Boot, AngularJS,Mysql) the project enables users to add, edit, and delete tasks in real time.",
-    tags: [
-      {
-        name: "Spring Boot",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Angularjs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Java",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "BootStrap",
-        color: "orange-text-gradient",
-      },
-    ],
-    image: todo,
-    source_code_link: "https://github.com/Hariprasath2030/todo-2",
-  },
-  {
-    name: "Portfolio",
-    description:
-      "This project is a personal portfolio website showcasing various web applications, including all projects, experience, about, contact details, skills, etc.It highlights my technical skills in full-stack development and offers a platform for users to explore my work and projects.",
-    tags: [
-      {
-        name: "Reactjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Tailwindcss",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Threejs",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Framer Motion",
-        color: "orange-text-gradient",
-      },
-    ],
-    "image": portfolio,
-    "source_code_link": "https://github.com/Hariprasath2030/portfolio-3d"
-  },
-  {
     name: "Smart Retail Hub",
     description:
       "Smart Retail Hub is an integrated system designed to optimize inventory management through automation and real-time monitoring. It streamlines retail operations by combining automated checkout, sales tracking, and customer engagement.",
@@ -367,10 +247,10 @@ const projects = [
   {
     name: "Budget Bloom",
     description:
-      "Smart Retail Hub is an integrated system designed to optimize inventory management through automation and real-time monitoring. It streamlines retail operations by combining automated checkout, sales tracking, and customer engagement.",
+      "Budget-Bloom is a full-stack app that helps users manage finances by tracking income, expenses, and analyzing spending with visual charts. It offers authentication, filters, and detailed financial insights.",
     tags: [
       {
-        name: "Reactjs",
+        name: "Nextjs",
         color: "blue-text-gradient",
       },
       {
@@ -378,7 +258,7 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "Nodejs",
+        name: "Drizzle Orm",
         color: "pink-text-gradient",
       },
       {
@@ -386,21 +266,25 @@ const projects = [
         color: "orange-text-gradient",
       },
       {
-        name: "Mongodb",
+        name: "Neon",
         color: "White-text-gradient",
       },
+      {
+        name: "Clerk",
+        color: "blue-text-gradient",
+      },
     ],
-    "image": smartretail,
-    "source_code_link": "https://github.com/Hariprasath2030/Retail-Hub-client",
-    "live_demo_link": "https://retail-hub-client.vercel.app/"
+    "image": budgetbloom,
+    "source_code_link": "https://github.com/Hariprasath2030/Budget-Bloom",
+    "live_demo_link": "https://budget-bloom.vercel.app/"
   },
   {
-    name: "Smart Retail Hub",
+    name: "Fest-Book",
     description:
-      "Smart Retail Hub is an integrated system designed to optimize inventory management through automation and real-time monitoring. It streamlines retail operations by combining automated checkout, sales tracking, and customer engagement.",
+      "Fest-Book is an event management platform that connects organizers and customers, enabling event creation, promotion, and booking. It offers a dynamic interface for seamless interaction and communication.",
     tags: [
       {
-        name: "Reactjs",
+        name: "Nextjs",
         color: "blue-text-gradient",
       },
       {
@@ -416,18 +300,22 @@ const projects = [
         color: "orange-text-gradient",
       },
       {
-        name: "Mongodb",
+        name: "Cluster",
         color: "White-text-gradient",
       },
+      {
+        name: "Clerk",
+        color: "blue-text-gradient",
+      },
     ],
-    "image": smartretail,
-    "source_code_link": "https://github.com/Hariprasath2030/Retail-Hub-client",
-    "live_demo_link": "https://retail-hub-client.vercel.app/"
+    "image": festbook,
+    "source_code_link": "https://github.com/Hariprasath2030/Fest-Event-App-Frontend",
+    "live_demo_link": "https://fest-book.vercel.app/"
   },
   {
-    name: "Smart Retail Hub",
+    name: "AI-Smart HealthCare",
     description:
-      "Smart Retail Hub is an integrated system designed to optimize inventory management through automation and real-time monitoring. It streamlines retail operations by combining automated checkout, sales tracking, and customer engagement.",
+      "Smart Healthcare is a virtual doctor platform that uses AI to provide accessible healthcare remotely, especially for underserved areas. Built with React.js, Tailwind CSS, Clerk, and MongoDB, it aims to bridge the gap in healthcare access.",
     tags: [
       {
         name: "Reactjs",
@@ -446,15 +334,15 @@ const projects = [
         color: "orange-text-gradient",
       },
       {
-        name: "Mongodb",
+        name: "Cluster",
         color: "White-text-gradient",
       },
     ],
-    "image": smartretail,
-    "source_code_link": "https://github.com/Hariprasath2030/Retail-Hub-client",
-    "live_demo_link": "https://retail-hub-client.vercel.app/"
+    "image": healthcare,
+    "source_code_link": "https://github.com/Hariprasath2030/Heal_Smart_System",
+    "live_demo_link": "https://heal-smart-system.vercel.app/"
   }
 
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, projects };

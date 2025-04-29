@@ -26,11 +26,11 @@ import mysql from "./tech/mysql.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
-import todo from "./todo.png";
-import portfolio from "./portfolio.png";
 import smartretail from "./smart-retail.png";
-
+import nextjs from "./tech/nextjs.png"
+import budgetbloom from "./budgetbloom.png"
+import festbook from "./fest-book.png"
+import healthcare from "./healthcare.png"
 export {
   hari,
   port,
@@ -56,11 +56,12 @@ export {
   threejs,
   carrent,
   jobit,
-  tripguide,
-  todo,
   java,
   mern,
   mysql,
-  portfolio,
-  smartretail
+  smartretail,
+  nextjs,
+  budgetbloom,
+  festbook,
+  healthcare
 };
