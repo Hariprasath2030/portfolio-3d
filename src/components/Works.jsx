@@ -18,6 +18,7 @@ const ProjectCard = ({
   live_demo_link,
 }) => {
   return (
+    
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <div
         onClick={() => window.open(live_demo_link, "_blank")}
@@ -86,6 +87,8 @@ const ProjectCard = ({
 const Works = () => {
   return (
     <>
+    <section id="projects">
+
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText}`}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects</h2>
@@ -95,7 +98,7 @@ const Works = () => {
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
-        >
+          >
           Following projects showcase my skills and experience through
           real-world examples of my work. Each project is briefly described with
           links to code repositories and live demos. It reflects my
@@ -119,6 +122,7 @@ const Works = () => {
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
+        </section>
     </>
   );
 };

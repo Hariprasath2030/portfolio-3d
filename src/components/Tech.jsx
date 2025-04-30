@@ -8,6 +8,7 @@ import { styles } from "../styles";
 
 const Tech = () => {
   return (
+    <section id="skills">
     <div className="w-full">
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText}`}>Technologies I Use</p>
@@ -24,6 +25,7 @@ const Tech = () => {
         ))}
       </div>
     </div>
+    </section>
   );
 };
 
