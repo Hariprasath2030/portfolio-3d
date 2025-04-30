@@ -49,10 +49,10 @@ const About = () => {
         {/* Text section */}
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="text-secondary text-[17px] max-w-3xl leading-[30px] md:w-1/2"
+          className="text-white text-[17px] max-w-3xl leading-[30px] md:w-1/2"
         >
           I'm a skilled software developer with experience in Mern Stack and
-          Spring Boot, Java, PHP, C, Angular JS and expertise in frameworks like React, Node.js, Express Js, Vite, Tailwind Css, and
+          Spring Boot Basics, Java, PHP, C, Angular JS and expertise in frameworks like React, Node.js, Express Js, Vite, Tailwind Css, and
           Three.js. I'm a quick learner and collaborate closely with clients to
           create efficient, scalable, and user-friendly solutions that solve
           real-world problems. Let's work together to bring your ideas to life!
