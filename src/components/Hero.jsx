@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-import { FaArrowDown } from "react-icons/fa";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 
@@ -25,28 +23,6 @@ const Hero = () => {
           </p>
         </div>
       </div>
-
-      {/* Download Button in the Right Corner */}
-      <motion.div
-        whileHover={{ scale: 1.05, y: -5 }}
-        transition={{ type: "spring", stiffness: 300 }}
-        className="absolute bottom-10 right-10 flex items-center justify-center"
-      >
-        <a
-          href="/public/HARIPRASATH_R.pdf" // Ensure this file is in the public folder
-          download
-          className="group flex items-center justify-center gap-2 px-5 py-3 text-sm sm:text-base font-semibold text-black bg-[#04eaff] rounded-lg shadow-md transition-all duration-300 hover:bg-white"
-        >
-          Download Resume
-          <motion.span
-            animate={{ y: [0, -4, 0] }}
-            transition={{ duration: 1.2, repeat: Infinity, repeatType: "loop" }}
-          >
-            <FaArrowDown className="text-black" />
-          </motion.span>
-        </a>
-      </motion.div>
-
       {/* 3D Canvas */}
       <ComputersCanvas />
     </section>
