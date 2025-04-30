@@ -1,17 +1,23 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Decal, Float, OrbitControls, Preload, useTexture } from "@react-three/drei";
+import {
+  Decal,
+  Float,
+  OrbitControls,
+  Preload,
+  useTexture,
+} from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
-const Ball = ({ imgUrl }) => {
+const Ball = ({ imgUrl, scale }) => {
   const [decal] = useTexture([imgUrl]);
 
   return (
-    <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
-      <ambientLight intensity={0.5} />
+    <Float speed={2} rotationIntensity={1} floatIntensity={2}>
+      <ambientLight intensity={0.7} />
       <directionalLight position={[0, 0, 5]} intensity={1} />
-      <mesh castShadow receiveShadow scale={2.5}>
+      <mesh castShadow receiveShadow scale={scale}>
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
           color="#fff8eb"
@@ -21,8 +27,8 @@ const Ball = ({ imgUrl }) => {
         />
         <Decal
           position={[0, 0, 1]}
-          rotation={[Math.PI * 2, 0, 6.25]}
-          scale={0.9} // Scale of the decal for responsiveness
+          rotation={[2 * Math.PI, 0, 6.25]}
+          scale={0.9}
           map={decal}
           flatShading
         />
@@ -33,31 +39,30 @@ const Ball = ({ imgUrl }) => {
 
 const BallCanvas = ({ icon }) => {
   const [canvasSize, setCanvasSize] = useState({ width: 150, height: 150 });
+  const [ballScale, setBallScale] = useState(2.5);
 
   useEffect(() => {
-    const updateCanvasSize = () => {
+    const updateResponsiveValues = () => {
       if (window.innerWidth <= 768) {
-        // Mobile
         setCanvasSize({ width: 100, height: 100 });
+        setBallScale(1.8);
       } else if (window.innerWidth <= 1024) {
-        // Tablet
         setCanvasSize({ width: 130, height: 130 });
+        setBallScale(2.2);
       } else {
-        // Desktop
         setCanvasSize({ width: 150, height: 150 });
+        setBallScale(2.5);
       }
     };
 
-    // Initialize the size and add a listener
-    updateCanvasSize();
-    window.addEventListener("resize", updateCanvasSize);
-
-    // Cleanup listener on unmount
-    return () => window.removeEventListener("resize", updateCanvasSize);
+    updateResponsiveValues();
+    window.addEventListener("resize", updateResponsiveValues);
+    return () => window.removeEventListener("resize", updateResponsiveValues);
   }, []);
 
   return (
     <div
+      className="flex justify-center items-center"
       style={{
         width: `${canvasSize.width}px`,
         height: `${canvasSize.height}px`,
@@ -65,18 +70,18 @@ const BallCanvas = ({ icon }) => {
       }}
     >
       <Canvas
-        frameloop="demand"
+        frameloop="always"
         dpr={[1, 2]}
         gl={{ preserveDrawingBuffer: true }}
         style={{
           width: "100%",
           height: "100%",
-          background: "black", // Background color for canvas
+          background: "black",
         }}
       >
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls enableZoom={false} />
-          <Ball imgUrl={icon} />
+          <Ball imgUrl={icon} scale={ballScale} />
         </Suspense>
         <Preload all />
       </Canvas>

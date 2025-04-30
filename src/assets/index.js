@@ -27,7 +27,6 @@ import mysql from "./tech/mysql.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import smartretail from "./smart-retail.png";
-import nextjs from "./tech/nextjs.png"
 import budgetbloom from "./budgetbloom.png"
 import festbook from "./fest-book.png"
 import healthcare from "./healthcare.png"
@@ -60,7 +59,6 @@ export {
   mern,
   mysql,
   smartretail,
-  nextjs,
   budgetbloom,
   festbook,
   healthcare
