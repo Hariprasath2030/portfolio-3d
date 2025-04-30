@@ -89,7 +89,7 @@ const About = () => {
           download
           className="group flex items-center justify-center gap-2 px-5 py-3 text-sm sm:text-base font-semibold text-black bg-[#04eaff] rounded-lg shadow-md transition-all duration-300 hover:bg-white"
         >
-          Download Resume
+          View My Resume
           <motion.span
             animate={{ y: [0, -4, 0] }}
             transition={{ duration: 1.2, repeat: Infinity, repeatType: "loop" }}
