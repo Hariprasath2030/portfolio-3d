@@ -48,8 +48,6 @@ export const navLinks = [
     title: "Contact",
   },
 ];
-
-
 const services = [
   {
     title: "Web Developer",
