@@ -192,7 +192,9 @@ const projects = [
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/Hariprasath2030/Restaurant-management-system",
+    "source_code_link": "https://github.com/Hariprasath2030/Restaurant-management-system",
+    "live_demo_link": "https://restaurant-management-system-vjyw.vercel.app/"
+   
   },
   {
     name: "GRADE CRAFT",
