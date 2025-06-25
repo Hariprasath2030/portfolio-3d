@@ -14,9 +14,9 @@ const Ball = ({ imgUrl, scale }) => {
   const [decal] = useTexture([imgUrl]);
 
   return (
-    <Float speed={2} rotationIntensity={1} floatIntensity={2}>
-      <ambientLight intensity={0.7} />
-      <directionalLight position={[0, 0, 5]} intensity={1} />
+    <Float speed={1.5} rotationIntensity={0.8} floatIntensity={1.5}> {/* Reduced intensities */}
+      <ambientLight intensity={0.6} /> {/* Reduced lighting intensity */}
+      <directionalLight position={[0, 0, 5]} intensity={0.8} />
       <mesh castShadow receiveShadow scale={scale}>
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
@@ -70,9 +70,14 @@ const BallCanvas = ({ icon }) => {
       }}
     >
       <Canvas
-        frameloop="always"
-        dpr={[1, 2]}
-        gl={{ preserveDrawingBuffer: true }}
+        frameloop="demand" // Changed from "always" to "demand" for better performance
+        dpr={[1, 1.5]} // Reduced pixel ratio
+        gl={{ 
+          preserveDrawingBuffer: true,
+          antialias: false, // Disabled antialiasing for better performance
+          powerPreference: "high-performance"
+        }}
+        performance={{ min: 0.5 }} // Added performance settings
         style={{
           width: "100%",
           height: "100%",
@@ -80,7 +85,7 @@ const BallCanvas = ({ icon }) => {
         }}
       >
         <Suspense fallback={<CanvasLoader />}>
-          <OrbitControls enableZoom={false} />
+          <OrbitControls enableZoom={false} enablePan={false} /> {/* Disabled pan for better performance */}
           <Ball imgUrl={icon} scale={ballScale} />
         </Suspense>
         <Preload all />

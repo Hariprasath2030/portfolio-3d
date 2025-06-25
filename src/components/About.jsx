@@ -10,14 +10,14 @@ import { fadeIn, textVariant } from "../utils/motion";
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className="xs:w-[250px] w-full">
     <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+      variants={fadeIn("right", "spring", index * 0.3, 0.5)} // Reduced delay and duration
       className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
     >
       <div
         options={{
-          max: 45,
+          max: 25, // Reduced tilt intensity
           scale: 1,
-          speed: 450,
+          speed: 300, // Reduced speed
         }}
         className="bg-black rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
       >
@@ -46,7 +46,7 @@ const About = () => {
       <div className="flex flex-col md:flex-row items-center mt-0">
         {/* Text section */}
         <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
+          variants={fadeIn("", "", 0.1, 0.8)} // Reduced duration
           className="text-white text-[17px] max-w-3xl leading-[30px] md:w-1/2 px-4 md:px-0"
         >
           I'm a skilled Frontend Developer with experience in MERN Stack and
@@ -57,9 +57,9 @@ const About = () => {
           Let's work together to bring your ideas to life!
         </motion.p>
 
-        {/* Image section with bounce effect */}
+        {/* Image section with optimized bounce effect */}
         <motion.div
-          variants={fadeIn("left", "spring", 0.5, 0.75)}
+          variants={fadeIn("left", "spring", 0.3, 0.6)} // Reduced delay and duration
           className="mt-8 md:mt-0 md:w-1/2 flex justify-center"
         >
           <motion.img
@@ -67,12 +67,12 @@ const About = () => {
             alt="About"
             className="w-48 h-48 object-cover rounded-2xl sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-[300px] lg:h-[300px]"
             animate={{
-              y: [0, -10, 0], // Bounce effect (move up and down)
+              y: [0, -8, 0], // Reduced bounce distance
             }}
             transition={{
-              duration: 2,
+              duration: 3, // Increased duration for smoother animation
               repeat: Infinity,
-              repeatType: "loop", // Infinite loop for bounce
+              repeatType: "loop",
               ease: "easeInOut",
             }}
           />
@@ -81,19 +81,19 @@ const About = () => {
 
       {/* Download Button Below Introduction */}
       <motion.div
-        whileHover={{ scale: 1.05, y: -5 }}
-        transition={{ type: "spring", stiffness: 300 }}
+        whileHover={{ scale: 1.03, y: -3 }} // Reduced hover effects
+        transition={{ type: "spring", stiffness: 200, damping: 15 }} // Added damping
         className="mt-0 flex justify-center left md:w-1/3 "
       >
         <a
-          href="/public/HARIPRASATH_R.pdf" // Ensure this file is in the public folder
+          href="/public/HARIPRASATH_R.pdf"
           download
           className="group flex items-center justify-center gap-2 px-5 py-3 text-sm sm:text-base font-semibold text-black bg-[#04eaff] rounded-lg shadow-md transition-all duration-300 hover:bg-white"
         >
           View My Resume
           <motion.span
-            animate={{ y: [0, -4, 0] }}
-            transition={{ duration: 1.2, repeat: Infinity, repeatType: "loop" }}
+            animate={{ y: [0, -3, 0] }} // Reduced arrow bounce
+            transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }} // Slower animation
           >
             <FaArrowDown className="text-black" />
           </motion.span>
