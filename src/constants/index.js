@@ -126,6 +126,20 @@ const technologies = [
 
 const experiences = [
   {
+    title: "Frontend Developer Intern",
+    company_name: "Sekel Tech",
+    icon: reactjs,
+    iconBg: "#61DAFB",
+    date: "June 2025 - Present",
+    points: [
+      "Enhancing UI/UX designs with advanced Framer Motion animations and introducing 3D interactive elements for a modern, engaging user experience.",
+      "Optimizing animation performance and improving smooth transitions across both mobile and desktop platforms.",
+      "Elevating the responsiveness and scalability of applications to ensure seamless experiences across all devices.",
+      "Continuously upgrading UI components to deliver visually appealing, high-performance web interfaces.",
+      "Collaborating with cross-functional teams to build innovative, fast, and responsive digital solutions."
+    ],
+  },
+  {
     title: "Web Developer & Backend Developer",
     company_name: "Cognifyz Technologies",
     icon: mysql,
@@ -142,9 +156,9 @@ const experiences = [
   {
     title: "Advanced MERN Development",
     company_name: "Infosys Springboard",
-    icon: mern, // You can replace 'reactjs' with the appropriate icon source
-    iconBg: "#E6DEDD", // Background color for the icon
-    date: "September 2024 - october 2024",
+    icon: mern,
+    iconBg: "#E6DEDD",
+    date: "September 2024 - October 2024",
     points: [
       "Developing and maintaining web applications using React.js, Node.js, and Express.js, ensuring high performance and responsiveness.",
       "Collaborating with cross-functional teams, including UI/UX designers and product managers, to translate business requirements into technical specifications and deliver high-quality products.",
@@ -156,9 +170,9 @@ const experiences = [
   {
     title: "Spring Boot Development",
     company_name: "Infosys Springboard",
-    icon: git, // You can replace 'reactjs' with the appropriate icon source related to Spring Boot
-    iconBg: "#E6DEDD", // Background color for the icon
-    date: "October 2024 - Present",
+    icon: git,
+    iconBg: "#E6DEDD",
+    date: "October 2024 - December 2024",
     points: [
       "Developing and maintaining enterprise-level applications using Spring Boot, ensuring scalability, performance, and security.",
       "Designing RESTful APIs to facilitate seamless communication between front-end and back-end systems, optimizing data retrieval and processing.",
@@ -166,9 +180,7 @@ const experiences = [
       "Implementing Spring Security to enhance application security through user authentication and authorization, ensuring data protection.",
     ],
   }
-
 ];
-
 
 const projects = [
   {

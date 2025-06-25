@@ -49,11 +49,12 @@ const About = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="text-white text-[17px] max-w-3xl leading-[30px] md:w-1/2 px-4 md:px-0"
         >
-          I'm a skilled software developer with experience in Mern Stack and
-          Spring Boot Basics, Java, PHP, C, Angular JS and expertise in frameworks like React, Node.js, Express Js, Vite, Tailwind Css, and
-          Three.js. I'm a quick learner and collaborate closely with clients to
-          create efficient, scalable, and user-friendly solutions that solve
-          real-world problems. Let's work together to bring your ideas to life!
+          I'm a skilled Frontend Developer with experience in MERN Stack and
+          Spring Boot, specializing in React.js, Node.js, Express.js, and modern web technologies. 
+          Currently working as a Frontend Developer Intern at Sekel Tech, where I focus on enhancing 
+          UI/UX designs with advanced Framer Motion animations and 3D interactive elements. I'm passionate 
+          about creating efficient, scalable, and user-friendly solutions that solve real-world problems. 
+          Let's work together to bring your ideas to life!
         </motion.p>
 
         {/* Image section with bounce effect */}
