@@ -192,7 +192,7 @@ button:focus {
   color: white;
 }
 
-/* Responsive text sizes */
+/* Mobile Responsive Enhancements */
 @media (max-width: 768px) {
   .hero-text {
     font-size: 2.5rem;
@@ -200,6 +200,53 @@ button:focus {
   
   .section-text {
     font-size: 2rem;
+  }
+
+  /* Mobile specific animations */
+  .mobile-fade-in {
+    animation: mobileFadeIn 0.6s ease-out;
+  }
+
+  @keyframes mobileFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Mobile card adjustments */
+  .mobile-card {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+
+  /* Mobile text adjustments */
+  .mobile-text {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text {
+    font-size: 2rem;
+  }
+  
+  .section-text {
+    font-size: 1.5rem;
+  }
+
+  /* Extra small mobile adjustments */
+  .xs-mobile-padding {
+    padding: 0.75rem;
+  }
+
+  .xs-mobile-text {
+    font-size: 0.75rem;
   }
 }
 
@@ -213,5 +260,42 @@ button:focus {
 @supports (backdrop-filter: blur(10px)) {
   .backdrop-blur {
     backdrop-filter: blur(10px);
+  }
+}
+
+/* Enhanced hover states for mobile */
+@media (hover: hover) {
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* Touch-friendly button sizes */
+@media (max-width: 768px) {
+  button, .button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Improved contrast for accessibility */
+.high-contrast {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+/* Loading states */
+.loading-shimmer {
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
   }
 }

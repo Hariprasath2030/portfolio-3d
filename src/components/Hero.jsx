@@ -79,7 +79,7 @@ const Hero = () => {
                   transition={{ duration: 1, delay: 0.5 }}
                 >
                   <p className={`${styles.heroSubText} mt-2 text-white-100 max-w-3xl`}>
-                    Frontend Developer specializing in{" "}
+                    Full Stack Developer specializing in{" "}
                     <motion.span 
                       className="text-[#04eaff] font-semibold"
                       animate={{ opacity: [0.7, 1, 0.7] }}
@@ -88,7 +88,7 @@ const Hero = () => {
                       3D Interactive Experiences
                     </motion.span>
                     <br className="sm:block hidden" />
-                    Building modern, responsive web applications with cutting-edge animations
+                    Building modern, scalable web applications with cutting-edge animations and robust backend systems
                   </p>
                 </motion.div>
 
@@ -170,8 +170,9 @@ const Hero = () => {
                     <span className="text-2xl font-bold text-white">H</span>
                   </motion.div>
                   
-                  <h3 className="text-xl font-bold text-white mb-2">Frontend Developer</h3>
-                  <p className="text-gray-300 text-sm">Sekel Tech</p>
+                  <h3 className="text-xl font-bold text-white mb-2">Full Stack Developer</h3>
+                  <p className="text-gray-300 text-sm mb-1">Sekel Tech</p>
+                  <p className="text-[#04eaff] text-xs">3D Design Specialist</p>
                   
                   {/* Floating particles around card */}
                   {[...Array(6)].map((_, i) => (

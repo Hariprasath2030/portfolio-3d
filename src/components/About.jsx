@@ -206,7 +206,7 @@ const About = () => {
               className="text-gray-300 text-[18px] leading-[32px] mb-8"
               variants={fadeIn("", "", 0.1, 1)}
             >
-              I'm a passionate <span className="text-[#04eaff] font-semibold">Frontend Developer</span> currently 
+              I'm a passionate <span className="text-[#04eaff] font-semibold">Full Stack Developer</span> currently 
               working as an intern at <span className="text-[#915EFF] font-semibold">Sekel Tech</span> in Pune. 
               I specialize in creating immersive web experiences using cutting-edge technologies like 
               <span className="text-[#04eaff]"> React.js, Three.js, and Framer Motion</span>.

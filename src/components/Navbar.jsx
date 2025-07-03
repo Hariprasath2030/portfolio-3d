@@ -110,7 +110,7 @@ const Navbar = () => {
                 Hariprasath
               </span>
               <span className="sm:block hidden text-gray-300 ml-2">
-                | Frontend Developer
+                | Full Stack Developer
               </span>
             </p>
           </motion.div>

@@ -33,7 +33,11 @@ export const navLinks = [
   },
   {
     id: "work",
-    title: "Works",
+    title: "Experience",
+  },
+  {
+    id: "certifications",
+    title: "Certifications",
   },
   {
     id: "skills",
@@ -48,9 +52,10 @@ export const navLinks = [
     title: "Contact",
   },
 ];
+
 const services = [
   {
-    title: "Web Developer",
+    title: "Full Stack Developer",
     icon: web,
   },
   {
@@ -62,11 +67,9 @@ const services = [
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "3D Design Specialist",
     icon: creator,
   },
-
-
 ];
 
 const technologies = [
@@ -115,7 +118,7 @@ const technologies = [
     icon: docker,
   },
   {
-    name: "Boostrap",
+    name: "Bootstrap",
     icon: redux,
   },
   {
@@ -126,16 +129,16 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Frontend Developer Intern",
+    title: "Full Stack Developer Intern",
     company_name: "Sekel Tech",
     icon: reactjs,
     iconBg: "#61DAFB",
     date: "June 2025 - Present",
     points: [
       "Enhancing UI/UX designs with advanced Framer Motion animations and introducing 3D interactive elements for a modern, engaging user experience.",
+      "Developing full-stack applications using React.js, Node.js, and modern backend technologies for scalable solutions.",
       "Optimizing animation performance and improving smooth transitions across both mobile and desktop platforms.",
       "Elevating the responsiveness and scalability of applications to ensure seamless experiences across all devices.",
-      "Continuously upgrading UI components to deliver visually appealing, high-performance web interfaces.",
       "Collaborating with cross-functional teams to build innovative, fast, and responsive digital solutions."
     ],
   },
@@ -151,33 +154,6 @@ const experiences = [
       "Developed and maintained web applications with PHP and XAMPP, implementing RESTful APIs for seamless front-end integration.",
       "Ensured website responsiveness and optimized performance across various devices, while focusing on application performance, security, and scalability.",
       "Conducted unit tests and debugging to uphold high-quality standards; participated in code reviews and provided constructive feedback to enhance code quality and efficiency."
-    ],
-  },
-  {
-    title: "Advanced MERN Development",
-    company_name: "Infosys Springboard",
-    icon: mern,
-    iconBg: "#E6DEDD",
-    date: "September 2024 - October 2024",
-    points: [
-      "Developing and maintaining web applications using React.js, Node.js, and Express.js, ensuring high performance and responsiveness.",
-      "Collaborating with cross-functional teams, including UI/UX designers and product managers, to translate business requirements into technical specifications and deliver high-quality products.",
-      "Implementing responsive design principles and ensuring cross-browser compatibility, resulting in an optimal user experience across various devices and platforms.",
-      "Conducting code reviews and providing constructive feedback to team members, fostering a culture of continuous improvement and knowledge sharing within the development team.",
-      "Integrating RESTful APIs and third-party services, enhancing the functionality and performance of web applications."
-    ],
-  },
-  {
-    title: "Spring Boot Development",
-    company_name: "Infosys Springboard",
-    icon: git,
-    iconBg: "#E6DEDD",
-    date: "October 2024 - December 2024",
-    points: [
-      "Developing and maintaining enterprise-level applications using Spring Boot, ensuring scalability, performance, and security.",
-      "Designing RESTful APIs to facilitate seamless communication between front-end and back-end systems, optimizing data retrieval and processing.",
-      "Collaborating with cross-functional teams, including database administrators and DevOps engineers, to deploy applications in cloud environments and maintain CI/CD pipelines.",
-      "Implementing Spring Security to enhance application security through user authentication and authorization, ensuring data protection.",
     ],
   }
 ];
@@ -363,7 +339,6 @@ const projects = [
     "source_code_link": "https://github.com/Hariprasath2030/Heal_Smart_System",
     "live_demo_link": "https://heal-smart-system.vercel.app/"
   }
-
 ];
 
 export { services, technologies, experiences, projects };
