@@ -3,36 +3,74 @@ import { motion } from "framer-motion";
 import { SectionWrapper } from "../hoc";
 import { textVariant, fadeIn } from "../utils/motion";
 import { styles } from "../styles";
-import { FaCertificate, FaAward, FaExternalLinkAlt, FaCalendarAlt, FaDownload } from "react-icons/fa";
+import {
+  FaCertificate,
+  FaAward,
+  FaExternalLinkAlt,
+  FaCalendarAlt,
+  FaDownload,
+} from "react-icons/fa";
 
 const certifications = [
   {
     title: "Getting Started with Spring Boot 2.0",
     issuer: "Infosys Springboard",
     date: "October 2024 - December 2024",
-    description: "Comprehensive certification covering enterprise-level Spring Boot application development, RESTful API design, Spring Security implementation, and microservices architecture.",
-    skills: ["Spring Boot", "Spring Security", "RESTful APIs", "Microservices", "JPA/Hibernate"],
+    description:
+      "Comprehensive certification covering enterprise-level Spring Boot application development, RESTful API design, Spring Security implementation, and microservices architecture.",
+    skills: [
+      "Spring Boot",
+      "Spring Security",
+      "RESTful APIs",
+      "Microservices",
+      "JPA/Hibernate",
+    ],
     color: "from-green-400 to-blue-500",
-    certificateFile: "spring-boot-certificate.pdf" // Add your certificate file name
+    certificateFile: "Spring.pdf", // Add your certificate file name
   },
   {
     title: "Advanced MERN Stack Development",
     issuer: "Infosys Springboard",
     date: "September 2024 - October 2024",
-    description: "Full-stack web development certification focusing on MongoDB, Express.js, React.js, and Node.js ecosystem with modern development practices and deployment strategies.",
-    skills: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT Authentication"],
+    description:
+      "Full-stack web development certification focusing on MongoDB, Express.js, React.js, and Node.js ecosystem with modern development practices and deployment strategies.",
+    skills: [
+      "MongoDB",
+      "Express.js",
+      "React.js",
+      "Node.js",
+      "JWT Authentication",
+    ],
     color: "from-purple-400 to-pink-500",
-    certificateFile: "mern-stack-certificate.pdf" // Add your certificate file name
+    certificateFile: "Mern.pdf", // Add your certificate file name
   },
   {
     title: "Full Stack Web Development",
     issuer: "Cognifyz Technologies",
-    date: "March 2024 - April 2024",
-    description: "Comprehensive web development certification covering both frontend and backend technologies with hands-on project experience and industry best practices.",
-    skills: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "Responsive Design"],
+    date: "April 2024 - June 2024",
+    description:
+      "Comprehensive web development certification covering both frontend and backend technologies with hands-on project experience and industry best practices.",
+    skills: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP",
+      "MySQL",
+      "Responsive Design",
+    ],
     color: "from-orange-400 to-red-500",
-    certificateFile: "fullstack-web-certificate.pdf" // Add your certificate file name
-  }
+    certificateFile: "Cognify.pdf", // Add your certificate file name
+  },
+  {
+    title: "Introduction to DevOps",
+    issuer: "Great Learning Academy",
+    date: "November 2024",
+    description:
+      "Completed an introductory course on DevOps covering core concepts, tools, and practices essential for continuous integration, deployment, and automation in modern software development.",
+    skills: ["DevOps", "CI/CD", "Automation", "Software Development Lifecycle"],
+    color: "from-blue-500 to-green-500",
+    certificateFile: "Devops.pdf", // Your uploaded certificate file
+  },
 ];
 
 const CertificationCard = ({ certification, index }) => {
@@ -41,7 +79,7 @@ const CertificationCard = ({ certification, index }) => {
   const handleDownloadCertificate = (e) => {
     e.stopPropagation();
     // Create a link element and trigger download
-    const link = document.createElement('a');
+    const link = document.createElement("a");
     link.href = `/certificates/${certification.certificateFile}`;
     link.download = certification.certificateFile;
     document.body.appendChild(link);
@@ -58,12 +96,12 @@ const CertificationCard = ({ certification, index }) => {
     >
       <motion.div
         className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-3xl border border-gray-700 hover:border-[#00ff88] transition-all duration-500 cursor-pointer overflow-hidden"
-        whileHover={{ 
+        whileHover={{
           y: -10,
-          boxShadow: "0 25px 50px rgba(0, 255, 136, 0.2)"
+          boxShadow: "0 25px 50px rgba(0, 255, 136, 0.2)",
         }}
         style={{
-          transformStyle: "preserve-3d"
+          transformStyle: "preserve-3d",
         }}
       >
         {/* Animated Background Gradient */}
@@ -71,7 +109,7 @@ const CertificationCard = ({ certification, index }) => {
           className={`absolute inset-0 bg-gradient-to-br ${certification.color} opacity-10 rounded-3xl`}
           animate={{
             opacity: isHovered ? 0.2 : 0.1,
-            scale: isHovered ? 1.02 : 1
+            scale: isHovered ? 1.02 : 1,
           }}
           transition={{ duration: 0.3 }}
         />
@@ -83,13 +121,13 @@ const CertificationCard = ({ certification, index }) => {
               className="p-3 bg-gradient-to-r from-[#00ff88] to-[#ff6b35] rounded-2xl"
               animate={{
                 rotate: isHovered ? 360 : 0,
-                scale: isHovered ? 1.1 : 1
+                scale: isHovered ? 1.1 : 1,
               }}
               transition={{ duration: 0.6 }}
             >
               <FaCertificate className="text-white text-xl" />
             </motion.div>
-            
+
             <motion.button
               className="p-2 bg-gray-700 rounded-full hover:bg-[#00ff88] transition-colors duration-300"
               whileHover={{ scale: 1.1 }}
@@ -101,21 +139,21 @@ const CertificationCard = ({ certification, index }) => {
             </motion.button>
           </div>
 
-          <motion.h3 
+          <motion.h3
             className="text-white font-bold text-xl mb-2"
             animate={{
-              color: isHovered ? "#00ff88" : "#ffffff"
+              color: isHovered ? "#00ff88" : "#ffffff",
             }}
             transition={{ duration: 0.3 }}
           >
             {certification.title}
           </motion.h3>
-          
+
           <div className="flex items-center gap-2 text-gray-300 text-sm mb-2">
             <FaAward className="text-[#ff6b35]" />
             <span>{certification.issuer}</span>
           </div>
-          
+
           <div className="flex items-center gap-2 text-gray-400 text-sm">
             <FaCalendarAlt className="text-[#00ff88]" />
             <span>{certification.date}</span>
@@ -134,13 +172,13 @@ const CertificationCard = ({ certification, index }) => {
               key={skill}
               className="text-xs px-3 py-1 bg-gray-700 text-[#00ff88] rounded-full border border-gray-600 hover:border-[#00ff88] transition-colors duration-300"
               initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ 
-                opacity: 1, 
-                scale: 1
+              animate={{
+                opacity: 1,
+                scale: 1,
               }}
-              transition={{ 
-                duration: 0.3, 
-                delay: skillIndex * 0.1
+              transition={{
+                duration: 0.3,
+                delay: skillIndex * 0.1,
               }}
               whileHover={{ scale: 1.05 }}
             >
@@ -170,7 +208,7 @@ const CertificationCard = ({ certification, index }) => {
                   duration: 1.5,
                   delay: i * 0.2,
                   repeat: Infinity,
-                  repeatDelay: 2
+                  repeatDelay: 2,
                 }}
               />
             ))}
@@ -186,10 +224,12 @@ const Certifications = () => {
     <section id="certifications" className="relative">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#ff6b35]/5 to-transparent"></div>
-      
+
       <div className="relative z-10">
         <motion.div variants={textVariant()}>
-          <p className={`${styles.sectionSubText} text-center`}>Professional Achievements</p>
+          <p className={`${styles.sectionSubText} text-center`}>
+            Professional Achievements
+          </p>
           <h2 className={`${styles.sectionHeadText} text-center mb-4`}>
             <span className="bg-gradient-to-r from-[#ff6b35] to-[#00ff88] bg-clip-text text-transparent">
               Certifications & Training
@@ -202,9 +242,10 @@ const Certifications = () => {
           className="w-full flex justify-center"
         >
           <p className="mt-4 text-gray-300 text-[17px] max-w-3xl leading-[30px] text-center">
-            Continuous learning and professional development through industry-recognized 
-            certifications and specialized training programs that enhance my technical expertise 
-            and keep me updated with the latest technologies and best practices.
+            Continuous learning and professional development through
+            industry-recognized certifications and specialized training programs
+            that enhance my technical expertise and keep me updated with the
+            latest technologies and best practices.
           </p>
         </motion.div>
 
@@ -219,14 +260,15 @@ const Certifications = () => {
               boxShadow: [
                 "0 0 0 0 rgba(0, 255, 136, 0.4)",
                 "0 0 0 10px rgba(0, 255, 136, 0)",
-              ]
+              ],
             }}
             transition={{
               duration: 2,
               repeat: Infinity,
             }}
           >
-            📜 Click the download button to get certificate • Hover for interactive experience
+            📜 Click the download button to get certificate • Hover for
+            interactive experience
           </motion.p>
         </motion.div>
 
@@ -253,18 +295,20 @@ const Certifications = () => {
             { number: "4+", label: "Certifications" },
             { number: "2+", label: "Years Learning" },
             { number: "15+", label: "Technologies" },
-            { number: "100%", label: "Completion Rate" }
+            { number: "100%", label: "Completion Rate" },
           ].map((stat, index) => (
             <motion.div
               key={index}
               className="text-center p-4 bg-gray-800/50 rounded-2xl border border-gray-700"
-              whileHover={{ 
+              whileHover={{
                 scale: 1.05,
-                borderColor: "#00ff88"
+                borderColor: "#00ff88",
               }}
               transition={{ duration: 0.3 }}
             >
-              <h3 className="text-2xl md:text-3xl font-bold text-[#00ff88] mb-2">{stat.number}</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-[#00ff88] mb-2">
+                {stat.number}
+              </h3>
               <p className="text-gray-300 text-sm">{stat.label}</p>
             </motion.div>
           ))}

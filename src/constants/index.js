@@ -23,7 +23,8 @@ import {
   smartretail,
   budgetbloom,
   festbook,
-  healthcare
+  healthcare,
+  sekel
 } from "../assets";
 
 export const navLinks = [
@@ -128,34 +129,31 @@ const technologies = [
 ];
 
 const experiences = [
-  {
-    title: "Full Stack Developer Intern",
-    company_name: "Sekel Tech",
-    icon: reactjs,
-    iconBg: "#61DAFB",
-    date: "June 2025 - Present",
-    points: [
-      "Enhancing UI/UX designs with advanced Framer Motion animations and introducing 3D interactive elements for a modern, engaging user experience.",
-      "Developing full-stack applications using React.js, Node.js, and modern backend technologies for scalable solutions.",
-      "Optimizing animation performance and improving smooth transitions across both mobile and desktop platforms.",
-      "Elevating the responsiveness and scalability of applications to ensure seamless experiences across all devices.",
-      "Collaborating with cross-functional teams to build innovative, fast, and responsive digital solutions."
-    ],
-  },
-  {
-    title: "Web Developer & Backend Developer",
-    company_name: "Cognifyz Technologies",
-    icon: mysql,
-    iconBg: "#383E56",
-    date: "June 2023 - April 2024",
-    points: [
-      "Technologies: HTML, CSS, JavaScript, PHP",
-      "Built and maintained dynamic websites utilizing HTML, CSS, and JavaScript frameworks, ensuring intuitive user interfaces through collaboration with UI/UX designers.",
-      "Developed and maintained web applications with PHP and XAMPP, implementing RESTful APIs for seamless front-end integration.",
-      "Ensured website responsiveness and optimized performance across various devices, while focusing on application performance, security, and scalability.",
-      "Conducted unit tests and debugging to uphold high-quality standards; participated in code reviews and provided constructive feedback to enhance code quality and efficiency."
-    ],
-  }
+{
+  title: "Frontend Developer Intern",
+  company_name: "Sekel Tech",
+  icon: sekel,
+  iconBg: "#61DAFB",
+  date: "June 2025 - Present",
+  points: [
+    "Working as a Frontend Developer in a hyperlocal omni-channel platform using Next.js and API integration.",
+    "Building responsive, scalable UIs with smooth animations and enhanced user experiences.",
+    "Collaborating with cross-functional teams to deliver fast, interactive, and modern web solutions."
+  ],
+},{
+  title: "Web Developer & Backend Developer",
+  company_name: "Cognifyz Technologies",
+  icon: mysql,
+  iconBg: "#383E56",
+  date: "April 2024 - June 2024",
+  points: [
+    "Worked on dynamic website development using HTML, CSS, JavaScript, and PHP.",
+    "Developed backend services and RESTful APIs using PHP and XAMPP for smooth frontend integration.",
+    "Focused on responsive design, performance optimization, and application security across devices.",
+    "Performed unit testing, debugging, and code reviews to maintain high-quality code standards."
+  ],
+}
+
 ];
 
 const projects = [

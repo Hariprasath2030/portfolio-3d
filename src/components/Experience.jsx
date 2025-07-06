@@ -32,8 +32,7 @@ const ExperienceCard = ({ experience }) => {
           {experience.date}
         </span>
       }
-      iconStyle={{ 
-        background: experience.iconBg,
+      iconStyle={{ background: "#fff",
         border: "3px solid #00ff88",
         boxShadow: "0 0 20px rgba(0, 255, 136, 0.3)"
       }}

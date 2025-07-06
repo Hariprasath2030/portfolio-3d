@@ -23,7 +23,7 @@ import threejs from "./tech/threejs.svg";
 import java from "./tech/java.png";
 import mern from "./tech/mern.png"; 
 import mysql from "./tech/mysql.png"; 
-
+import sekel from "./tech/sekel.png"
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import smartretail from "./smart-retail.png";
@@ -61,5 +61,6 @@ export {
   smartretail,
   budgetbloom,
   festbook,
-  healthcare
+  healthcare,
+  sekel
 };

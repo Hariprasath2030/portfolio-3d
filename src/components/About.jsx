@@ -6,6 +6,7 @@ import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
+
 const ServiceCard = ({ index, title, icon }) => (
   <motion.div
     variants={fadeIn("right", "spring", index * 0.2, 0.6)}
