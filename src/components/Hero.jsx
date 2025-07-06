@@ -80,15 +80,15 @@ const Hero = () => {
                 >
                   <p className={`${styles.heroSubText} mt-2 text-white-100 max-w-3xl`}>
                     Full Stack Developer specializing in{" "}
-                    <motion.span 
-                      className="text-[#04eaff] font-semibold"
-                      animate={{ opacity: [0.7, 1, 0.7] }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                    >
-                      3D Interactive Experiences
-                    </motion.span>
-                    <br className="sm:block hidden" />
-                    Building modern, scalable web applications with cutting-edge animations and robust backend systems
+                 <motion.span 
+  className="text-[#04eaff] font-semibold"
+  animate={{ opacity: [0.7, 1, 0.7] }}
+  transition={{ duration: 2, repeat: Infinity }}
+>
+  3D Interactive Experiences
+</motion.span>
+<br className="sm:block hidden" />
+Crafting modern, scalable web apps with sleek animations and strong backends.
                   </p>
                 </motion.div>
 
@@ -171,7 +171,7 @@ const Hero = () => {
                   </motion.div>
                   
                   <h3 className="text-xl font-bold text-white mb-2">Full Stack Developer</h3>
-                  <p className="text-gray-300 text-sm mb-1">Sekel Tech</p>
+                  <p className="text-gray-300 text-sm mb-1">Working @Sekel Tech</p>
                   <p className="text-[#04eaff] text-xs">3D Design Specialist</p>
                   
                   {/* Floating particles around card */}
@@ -201,39 +201,7 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        {/* Scroll Indicator */}
-        <motion.div
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2 }}
-        >
-          <motion.div
-            className="w-6 h-10 border-2 border-[#04eaff] rounded-full flex justify-center"
-            animate={{
-              boxShadow: [
-                "0 0 0 0 rgba(4, 234, 255, 0.4)",
-                "0 0 0 10px rgba(4, 234, 255, 0)",
-              ]
-            }}
-            transition={{
-              duration: 1.5,
-              repeat: Infinity,
-            }}
-          >
-            <motion.div
-              className="w-1 h-3 bg-[#04eaff] rounded-full mt-2"
-              animate={{
-                y: [0, 12, 0]
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
-          </motion.div>
-        </motion.div>
+     
       </div>
     </section>
   );

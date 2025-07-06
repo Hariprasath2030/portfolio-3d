@@ -7,13 +7,11 @@ import { FaCertificate, FaAward, FaExternalLinkAlt, FaCalendarAlt } from "react-
 
 const certifications = [
   {
-    title: "Advanced Spring Boot Development",
+    title: "Getting Started with Spring Boot 2.0",
     issuer: "Infosys Springboard",
     date: "October 2024 - December 2024",
     description: "Comprehensive certification covering enterprise-level Spring Boot application development, RESTful API design, Spring Security implementation, and microservices architecture.",
     skills: ["Spring Boot", "Spring Security", "RESTful APIs", "Microservices", "JPA/Hibernate"],
-    credentialId: "SB-2024-SPRING-001",
-    verifyLink: "#",
     color: "from-green-400 to-blue-500"
   },
   {
@@ -22,28 +20,14 @@ const certifications = [
     date: "September 2024 - October 2024",
     description: "Full-stack web development certification focusing on MongoDB, Express.js, React.js, and Node.js ecosystem with modern development practices and deployment strategies.",
     skills: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT Authentication"],
-    credentialId: "SB-2024-MERN-002",
-    verifyLink: "#",
     color: "from-purple-400 to-pink-500"
-  },
-  {
-    title: "Frontend Development Specialization",
-    issuer: "Sekel Tech",
-    date: "June 2024 - Present",
-    description: "Specialized training in modern frontend technologies including React.js, Three.js, Framer Motion, and advanced UI/UX implementation with performance optimization.",
-    skills: ["React.js", "Three.js", "Framer Motion", "TypeScript", "Performance Optimization"],
-    credentialId: "ST-2024-FE-003",
-    verifyLink: "#",
-    color: "from-cyan-400 to-blue-600"
   },
   {
     title: "Full Stack Web Development",
     issuer: "Cognifyz Technologies",
-    date: "June 2023 - April 2024",
+    date: "March 2024 - April 2024",
     description: "Comprehensive web development certification covering both frontend and backend technologies with hands-on project experience and industry best practices.",
     skills: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "Responsive Design"],
-    credentialId: "CT-2024-FS-004",
-    verifyLink: "#",
     color: "from-orange-400 to-red-500"
   }
 ];
@@ -150,10 +134,6 @@ const CertificationCard = ({ certification, index }) => {
           ))}
         </div>
 
-        {/* Credential ID */}
-        <div className="text-xs text-gray-500 font-mono relative z-10">
-          ID: {certification.credentialId}
-        </div>
 
         {/* Floating Elements */}
         {isHovered && (

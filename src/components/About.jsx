@@ -84,9 +84,9 @@ const ServiceCard = ({ index, title, icon }) => (
 
 const About = () => {
   const stats = [
-    { icon: FaCode, value: "50+", label: "Projects Completed" },
-    { icon: FaRocket, value: "2+", label: "Years Experience" },
-    { icon: FaPalette, value: "15+", label: "Technologies" },
+    { icon: FaCode, value: "10+", label: "Projects Completed" },
+    { icon: FaRocket, value: "1", label: "Years Experience" },
+    { icon: FaPalette, value: "10+", label: "Technologies" },
   ];
 
   return (
@@ -153,7 +153,7 @@ const About = () => {
               {[...Array(6)].map((_, i) => (
                 <motion.div
                   key={i}
-                  className="absolute w-3 h-3 bg-gradient-to-r from-[#04eaff] to-[#915EFF] rounded-full"
+                  className="absolute w-3 h-3 bg-gradient-to-r"
                   style={{
                     left: `${10 + i * 15}%`,
                     top: `${10 + i * 12}%`,
