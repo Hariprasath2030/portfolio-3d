@@ -25,7 +25,7 @@ const ExperienceCard = ({ experience }) => {
       contentArrowStyle={{ borderRight: "7px solid #1a1b1b" }}
       date={
         <span style={{ 
-          color: "#04eaff", 
+          color: "#00ff88", 
           fontWeight: "bold",
           fontSize: "16px"
         }}>
@@ -34,8 +34,8 @@ const ExperienceCard = ({ experience }) => {
       }
       iconStyle={{ 
         background: experience.iconBg,
-        border: "3px solid #04eaff",
-        boxShadow: "0 0 20px rgba(4, 234, 255, 0.3)"
+        border: "3px solid #00ff88",
+        boxShadow: "0 0 20px rgba(0, 255, 136, 0.3)"
       }}
       icon={
         <div className='flex justify-center items-center w-full h-full'>
@@ -48,11 +48,11 @@ const ExperienceCard = ({ experience }) => {
       }
     >
       <div>
-        <h3 className='text-white text-[24px] font-bold bg-gradient-to-r from-[#04eaff] to-[#915EFF] bg-clip-text text-transparent'>
+        <h3 className='text-white text-[24px] font-bold bg-gradient-to-r from-[#00ff88] to-[#ff6b35] bg-clip-text text-transparent'>
           {experience.title}
         </h3>
         <p
-          className='text-[#04eaff] text-[16px] font-semibold'
+          className='text-[#00ff88] text-[16px] font-semibold'
           style={{ margin: 0 }}
         >
           {experience.company_name}
@@ -81,7 +81,7 @@ const Experience = () => {
           What I have done so far
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
-          <span className="bg-gradient-to-r from-[#04eaff] to-[#915EFF] bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[#00ff88] to-[#ff6b35] bg-clip-text text-transparent">
             Work Experience
           </span>
         </h2>

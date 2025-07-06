@@ -67,7 +67,7 @@ const Particles = () => {
         />
       </bufferGeometry>
       <pointsMaterial
-        color="#04eaff"
+        color="#00ff88"
         size={0.05}
         transparent
         opacity={0.6}
@@ -80,8 +80,8 @@ const Particles = () => {
 // Main 3D scene
 const Scene = () => {
   const shapes = [
-    { position: [-4, 2, -2], geometry: Sphere, color: "#04eaff", speed: 1.2 },
-    { position: [4, -1, -3], geometry: Box, color: "#915EFF", speed: 0.8 },
+    { position: [-4, 2, -2], geometry: Sphere, color: "#00ff88", speed: 1.2 },
+    { position: [4, -1, -3], geometry: Box, color: "#ff6b35", speed: 0.8 },
     { position: [-2, -3, -1], geometry: Torus, color: "#ff6b6b", speed: 1.5 },
     { position: [3, 3, -4], geometry: Octahedron, color: "#4ecdc4", speed: 1.0 },
     { position: [0, 4, -2], geometry: Sphere, color: "#45b7d1", speed: 0.9 },
@@ -91,8 +91,8 @@ const Scene = () => {
   return (
     <>
       <ambientLight intensity={0.3} />
-      <pointLight position={[10, 10, 10]} intensity={0.8} color="#04eaff" />
-      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#915EFF" />
+      <pointLight position={[10, 10, 10]} intensity={0.8} color="#00ff88" />
+      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#ff6b35" />
       
       <Particles />
       

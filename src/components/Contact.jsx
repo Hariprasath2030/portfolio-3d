@@ -68,7 +68,7 @@ const Contact = () => {
   const inputVariants = {
     focus: {
       scale: 1.02,
-      boxShadow: "0 0 0 2px rgba(4, 234, 255, 0.3)",
+      boxShadow: "0 0 0 2px rgba(0, 255, 136, 0.3)",
       transition: { duration: 0.2 }
     }
   };
@@ -76,7 +76,7 @@ const Contact = () => {
   return (
     <div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden relative">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#04eaff]/5 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#00ff88]/5 to-transparent"></div>
       
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
@@ -84,7 +84,7 @@ const Contact = () => {
       >
         {/* Animated background */}
         <motion.div
-          className="absolute inset-0 bg-gradient-to-br from-[#04eaff]/10 to-[#915EFF]/10 rounded-3xl"
+          className="absolute inset-0 bg-gradient-to-br from-[#00ff88]/10 to-[#ff6b35]/10 rounded-3xl"
           animate={{
             opacity: [0.3, 0.6, 0.3],
           }}
@@ -103,7 +103,7 @@ const Contact = () => {
           >
             <p className={`${styles.sectionSubText} text-center`}>Get in touch</p>
             <h3 className={`${styles.sectionHeadText} text-center mb-2`}>
-              <span className="bg-gradient-to-r from-[#04eaff] to-[#915EFF] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#00ff88] to-[#ff6b35] bg-clip-text text-transparent">
                 Contact Me
               </span>
             </h3>
@@ -123,7 +123,7 @@ const Contact = () => {
               variants={fadeIn("right", "spring", 0.1, 0.6)}
             >
               <span className="text-white font-medium mb-4 flex items-center gap-2">
-                <FaUser className="text-[#04eaff]" />
+                <FaUser className="text-[#00ff88]" />
                 Your Name
               </span>
               <motion.input
@@ -134,7 +134,7 @@ const Contact = () => {
                 onFocus={() => setFocusedField("name")}
                 onBlur={() => setFocusedField("")}
                 placeholder="What's your good name?"
-                className="bg-gray-800 py-4 px-6 placeholder:text-gray-400 text-white rounded-2xl outline-none border-2 border-gray-700 font-medium transition-all duration-300 focus:border-[#04eaff]"
+                className="bg-gray-800 py-4 px-6 placeholder:text-gray-400 text-white rounded-2xl outline-none border-2 border-gray-700 font-medium transition-all duration-300 focus:border-[#00ff88]"
                 variants={inputVariants}
                 animate={focusedField === "name" ? "focus" : ""}
                 required
@@ -147,7 +147,7 @@ const Contact = () => {
               variants={fadeIn("right", "spring", 0.2, 0.6)}
             >
               <span className="text-white font-medium mb-4 flex items-center gap-2">
-                <FaEnvelope className="text-[#04eaff]" />
+                <FaEnvelope className="text-[#00ff88]" />
                 Your Email
               </span>
               <motion.input
@@ -158,7 +158,7 @@ const Contact = () => {
                 onFocus={() => setFocusedField("email")}
                 onBlur={() => setFocusedField("")}
                 placeholder="What's your email address?"
-                className="bg-gray-800 py-4 px-6 placeholder:text-gray-400 text-white rounded-2xl outline-none border-2 border-gray-700 font-medium transition-all duration-300 focus:border-[#04eaff]"
+                className="bg-gray-800 py-4 px-6 placeholder:text-gray-400 text-white rounded-2xl outline-none border-2 border-gray-700 font-medium transition-all duration-300 focus:border-[#00ff88]"
                 variants={inputVariants}
                 animate={focusedField === "email" ? "focus" : ""}
                 required
@@ -171,7 +171,7 @@ const Contact = () => {
               variants={fadeIn("right", "spring", 0.3, 0.6)}
             >
               <span className="text-white font-medium mb-4 flex items-center gap-2">
-                <FaComment className="text-[#04eaff]" />
+                <FaComment className="text-[#00ff88]" />
                 Your Message
               </span>
               <motion.textarea
@@ -182,7 +182,7 @@ const Contact = () => {
                 onFocus={() => setFocusedField("message")}
                 onBlur={() => setFocusedField("")}
                 placeholder="What would you like to say?"
-                className="bg-gray-800 py-4 px-6 placeholder:text-gray-400 text-white rounded-2xl outline-none border-2 border-gray-700 font-medium resize-none transition-all duration-300 focus:border-[#04eaff]"
+                className="bg-gray-800 py-4 px-6 placeholder:text-gray-400 text-white rounded-2xl outline-none border-2 border-gray-700 font-medium resize-none transition-all duration-300 focus:border-[#00ff88]"
                 variants={inputVariants}
                 animate={focusedField === "message" ? "focus" : ""}
                 required
@@ -193,10 +193,10 @@ const Contact = () => {
             <motion.button
               type="submit"
               disabled={loading}
-              className="bg-gradient-to-r from-[#04eaff] to-[#915EFF] py-4 px-8 rounded-2xl outline-none w-fit text-white font-bold shadow-md shadow-primary flex items-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-gradient-to-r from-[#00ff88] to-[#ff6b35] py-4 px-8 rounded-2xl outline-none w-fit text-white font-bold shadow-md shadow-primary flex items-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
               whileHover={{ 
                 scale: loading ? 1 : 1.05,
-                boxShadow: loading ? "" : "0 20px 40px rgba(4, 234, 255, 0.3)"
+                boxShadow: loading ? "" : "0 20px 40px rgba(0, 255, 136, 0.3)"
               }}
               whileTap={{ scale: loading ? 1 : 0.95 }}
               variants={fadeIn("right", "spring", 0.4, 0.6)}
@@ -226,7 +226,7 @@ const Contact = () => {
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] relative"
       >
-        <div className="absolute inset-0 bg-gradient-to-l from-[#04eaff]/10 to-transparent rounded-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-l from-[#00ff88]/10 to-transparent rounded-3xl"></div>
         <EarthCanvas />
       </motion.div>
     </div>

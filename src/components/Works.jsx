@@ -25,10 +25,10 @@ const ProjectCard = ({
       onMouseLeave={() => setIsHovered(false)}
     >
       <motion.div
-        className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-3xl w-full sm:w-[360px] border border-gray-700 hover:border-[#04eaff] transition-all duration-500 cursor-pointer overflow-hidden"
+        className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-3xl w-full sm:w-[360px] border border-gray-700 hover:border-[#00ff88] transition-all duration-500 cursor-pointer overflow-hidden"
         whileHover={{ 
           y: -10,
-          boxShadow: "0 25px 50px rgba(4, 234, 255, 0.2)"
+          boxShadow: "0 25px 50px rgba(0, 255, 136, 0.2)"
         }}
         onClick={() => window.open(live_demo_link, "_blank")}
         style={{
@@ -37,7 +37,7 @@ const ProjectCard = ({
       >
         {/* Animated Background Gradient */}
         <motion.div
-          className="absolute inset-0 bg-gradient-to-br from-[#04eaff]/10 to-[#915EFF]/10 rounded-3xl"
+          className="absolute inset-0 bg-gradient-to-br from-[#00ff88]/10 to-[#ff6b35]/10 rounded-3xl"
           animate={{
             opacity: isHovered ? 1 : 0,
             scale: isHovered ? 1.02 : 1
@@ -75,7 +75,7 @@ const ProjectCard = ({
                   e.stopPropagation();
                   window.open(live_demo_link, "_blank");
                 }}
-                className="bg-[#04eaff] text-black px-4 py-2 rounded-full text-sm font-semibold hover:bg-white transition-colors duration-200"
+                className="bg-[#00ff88] text-black px-4 py-2 rounded-full text-sm font-semibold hover:bg-white transition-colors duration-200"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -102,7 +102,7 @@ const ProjectCard = ({
           <motion.h3 
             className="text-white font-bold text-[24px] mb-3"
             animate={{
-              color: isHovered ? "#04eaff" : "#ffffff"
+              color: isHovered ? "#00ff88" : "#ffffff"
             }}
             transition={{ duration: 0.3 }}
           >
@@ -123,7 +123,7 @@ const ProjectCard = ({
                 animate={{ 
                   opacity: 1, 
                   scale: 1,
-                  borderColor: isHovered ? "#04eaff" : "currentColor"
+                  borderColor: isHovered ? "#00ff88" : "currentColor"
                 }}
                 transition={{ 
                   duration: 0.3, 
@@ -144,7 +144,7 @@ const ProjectCard = ({
             {[...Array(3)].map((_, i) => (
               <motion.div
                 key={i}
-                className="absolute w-2 h-2 bg-[#04eaff] rounded-full"
+                className="absolute w-2 h-2 bg-[#00ff88] rounded-full"
                 style={{
                   right: `${10 + i * 15}%`,
                   top: `${10 + i * 10}%`,
@@ -174,13 +174,13 @@ const Works = () => {
   return (
     <section id="projects" className="relative">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#915EFF]/5 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#ff6b35]/5 to-transparent"></div>
       
       <div className="relative z-10">
         <motion.div variants={textVariant()}>
           <p className={`${styles.sectionSubText} text-center`}>My Portfolio</p>
           <h2 className={`${styles.sectionHeadText} text-center mb-4`}>
-            <span className="bg-gradient-to-r from-[#915EFF] to-[#04eaff] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#ff6b35] to-[#00ff88] bg-clip-text text-transparent">
               Featured Projects
             </span>
           </h2>
@@ -205,11 +205,11 @@ const Works = () => {
           variants={fadeIn("", "", 0.2, 1)}
         >
           <motion.p
-            className="text-[#04eaff] text-[16px] font-semibold bg-gray-800/50 px-6 py-2 rounded-full border border-[#04eaff]/30"
+            className="text-[#00ff88] text-[16px] font-semibold bg-gray-800/50 px-6 py-2 rounded-full border border-[#00ff88]/30"
             animate={{
               boxShadow: [
-                "0 0 0 0 rgba(4, 234, 255, 0.4)",
-                "0 0 0 10px rgba(4, 234, 255, 0)",
+                "0 0 0 0 rgba(0, 255, 136, 0.4)",
+                "0 0 0 10px rgba(0, 255, 136, 0)",
               ]
             }}
             transition={{
