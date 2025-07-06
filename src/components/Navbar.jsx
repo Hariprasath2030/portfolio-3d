@@ -106,7 +106,7 @@ const Navbar = () => {
             transition={{ duration: 0.2 }}
           >
             <p className="text-white text-[18px] font-bold cursor-pointer flex">
-              <span className="bg-gradient-to-r text-gray-50 bg-clip-text text-transparent">
+              <span className="text-gray-50 bg-clip-text text-transparent">
                 Hariprasath
               </span>
               <span className="sm:block hidden bg-gradient-to-r from-[#00ff88] to-[#ff6b35] bg-clip-text text-transparent ml-2">
