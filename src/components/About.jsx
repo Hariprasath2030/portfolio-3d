@@ -12,18 +12,18 @@ const ServiceCard = ({ index, title, icon }) => (
     className="relative group"
   >
     <motion.div
-      className="w-full bg-gradient-to-br from-gray-800 to-gray-900 p-[1px] rounded-[20px] shadow-2xl border border-gray-700 hover:border-[#04eaff] transition-all duration-500"
+      className="w-full bg-gradient-to-br from-gray-800 to-gray-900 p-[1px] rounded-[20px] shadow-2xl border border-gray-700 hover:border-[#00ff88] transition-all duration-500"
       whileHover={{ 
         scale: 1.05,
         rotateY: 10,
-        boxShadow: "0 25px 50px rgba(4, 234, 255, 0.2)"
+        boxShadow: "0 25px 50px rgba(0, 255, 136, 0.2)"
       }}
       style={{ transformStyle: "preserve-3d" }}
     >
       <div className="bg-gradient-to-br from-gray-900 to-black rounded-[20px] py-8 px-6 min-h-[280px] flex justify-evenly items-center flex-col relative overflow-hidden">
         {/* Animated background */}
         <motion.div
-          className="absolute inset-0 bg-gradient-to-br from-[#04eaff]/10 to-[#915EFF]/10"
+          className="absolute inset-0 bg-gradient-to-br from-[#00ff88]/10 to-[#ff6b35]/10"
           animate={{
             opacity: [0.3, 0.6, 0.3],
             scale: [1, 1.05, 1]
@@ -60,7 +60,7 @@ const ServiceCard = ({ index, title, icon }) => (
         {[...Array(4)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-[#04eaff] rounded-full"
+            className="absolute w-1 h-1 bg-[#00ff88] rounded-full"
             style={{
               left: `${20 + i * 20}%`,
               top: `${20 + i * 15}%`,
@@ -89,16 +89,26 @@ const About = () => {
     { icon: FaPalette, value: "10+", label: "Technologies" },
   ];
 
+  const handleDownloadResume = () => {
+    // Create a link element and trigger download
+    const link = document.createElement('a');
+    link.href = '/HARIPRASATH_R.pdf';
+    link.download = 'HARIPRASATH_R.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className="relative">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#04eaff]/5 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#00ff88]/5 to-transparent"></div>
       
       <div className="relative z-10">
         <motion.div variants={textVariant()}>
           <p className={`${styles.sectionSubText} text-center`}>Get to know me</p>
           <h2 className={`${styles.sectionHeadText} text-center mb-8`}>
-            <span className="bg-gradient-to-r from-[#04eaff] to-[#915EFF] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#00ff88] to-[#ff6b35] bg-clip-text text-transparent">
               About Me
             </span>
           </h2>
@@ -122,11 +132,11 @@ const About = () => {
               style={{ transformStyle: "preserve-3d" }}
             >
               <motion.div
-                className="w-80 h-80 rounded-3xl overflow-hidden border-4 border-[#04eaff]/30 shadow-2xl"
+                className="w-80 h-80 rounded-3xl overflow-hidden border-4 border-[#00ff88]/30 shadow-2xl"
                 animate={{
                   boxShadow: [
-                    "0 0 0 0 rgba(4, 234, 255, 0.4)",
-                    "0 0 0 20px rgba(4, 234, 255, 0)",
+                    "0 0 0 0 rgba(0, 255, 136, 0.4)",
+                    "0 0 0 20px rgba(0, 255, 136, 0)",
                   ]
                 }}
                 transition={{
@@ -181,7 +191,7 @@ const About = () => {
                   variants={fadeIn("up", "spring", 0.5 + index * 0.1, 0.6)}
                 >
                   <motion.div
-                    className="w-16 h-16 bg-gradient-to-br from-[#04eaff] to-[#915EFF] rounded-full flex items-center justify-center mb-2 mx-auto"
+                    className="w-16 h-16 bg-gradient-to-br from-[#00ff88] to-[#ff6b35] rounded-full flex items-center justify-center mb-2 mx-auto"
                     whileHover={{ 
                       scale: 1.1,
                       rotate: 360
@@ -206,18 +216,18 @@ const About = () => {
               className="text-gray-300 text-[18px] leading-[32px] mb-8"
               variants={fadeIn("", "", 0.1, 1)}
             >
-              I'm a passionate <span className="text-[#04eaff] font-semibold">Full Stack Developer</span> currently 
-              working as an intern at <span className="text-[#915EFF] font-semibold">Sekel Tech</span> in Pune. 
+              I'm a passionate <span className="text-[#00ff88] font-semibold">Full Stack Developer</span> currently 
+              working as an intern at <span className="text-[#ff6b35] font-semibold">Sekel Tech</span> in Pune. 
               I specialize in creating immersive web experiences using cutting-edge technologies like 
-              <span className="text-[#04eaff]"> React.js, Three.js, and Framer Motion</span>.
+              <span className="text-[#00ff88]"> React.js, Three.js, and Framer Motion</span>.
             </motion.p>
 
             <motion.p
               className="text-gray-300 text-[18px] leading-[32px] mb-8"
               variants={fadeIn("", "", 0.2, 1)}
             >
-              My expertise spans the <span className="text-[#04eaff] font-semibold">MERN Stack</span> and 
-              <span className="text-[#915EFF] font-semibold"> Spring Boot</span>, with a focus on building 
+              My expertise spans the <span className="text-[#00ff88] font-semibold">MERN Stack</span> and 
+              <span className="text-[#ff6b35] font-semibold"> Spring Boot</span>, with a focus on building 
               responsive, scalable applications that deliver exceptional user experiences across all devices.
             </motion.p>
 
@@ -226,7 +236,7 @@ const About = () => {
               variants={fadeIn("", "", 0.3, 1)}
             >
               I'm constantly pushing the boundaries of web development by integrating 
-              <span className="text-[#04eaff] font-semibold"> 3D animations, advanced UI/UX designs</span>, 
+              <span className="text-[#00ff88] font-semibold"> 3D animations, advanced UI/UX designs</span>, 
               and performance optimizations to create digital solutions that are both visually stunning and highly functional.
             </motion.p>
 
@@ -234,13 +244,12 @@ const About = () => {
             <motion.div
               variants={fadeIn("", "", 0.4, 1)}
             >
-              <motion.a
-                href="/public/HARIPRASATH_R.pdf"
-                download
-                className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#04eaff] to-[#915EFF] text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+              <motion.button
+                onClick={handleDownloadResume}
+                className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#00ff88] to-[#ff6b35] text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
                 whileHover={{ 
                   scale: 1.05,
-                  boxShadow: "0 20px 40px rgba(4, 234, 255, 0.3)"
+                  boxShadow: "0 20px 40px rgba(0, 255, 136, 0.3)"
                 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -257,7 +266,7 @@ const About = () => {
                     repeat: Infinity
                   }}
                 />
-              </motion.a>
+              </motion.button>
             </motion.div>
           </motion.div>
         </div>

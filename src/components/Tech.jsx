@@ -50,16 +50,16 @@ const FloatingTechCard = ({ technology, index }) => {
         style={{ transformStyle: "preserve-3d" }}
       >
         <motion.div
-          className="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-4 flex items-center justify-center cursor-pointer border border-gray-700 hover:border-[#04eaff] transition-all duration-300 relative overflow-hidden"
+          className="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-4 flex items-center justify-center cursor-pointer border border-gray-700 hover:border-[#00ff88] transition-all duration-300 relative overflow-hidden"
           whileHover={{ 
             scale: 1.1,
-            boxShadow: "0 20px 40px rgba(4, 234, 255, 0.3)"
+            boxShadow: "0 20px 40px rgba(0, 255, 136, 0.3)"
           }}
           whileTap={{ scale: 0.95 }}
         >
           {/* Animated Background Glow */}
           <motion.div
-            className="absolute inset-0 bg-gradient-to-br from-[#04eaff]/20 to-[#915EFF]/20 rounded-2xl"
+            className="absolute inset-0 bg-gradient-to-br from-[#00ff88]/20 to-[#ff6b35]/20 rounded-2xl"
             animate={{
               opacity: isHovered ? 1 : 0,
               scale: isHovered ? 1.05 : 1,
@@ -86,7 +86,7 @@ const FloatingTechCard = ({ technology, index }) => {
               {[...Array(3)].map((_, i) => (
                 <motion.div
                   key={i}
-                  className="absolute w-1 h-1 bg-[#04eaff] rounded-full"
+                  className="absolute w-1 h-1 bg-[#00ff88] rounded-full"
                   style={{
                     left: "50%",
                     top: "50%",
@@ -110,7 +110,7 @@ const FloatingTechCard = ({ technology, index }) => {
 
           {/* Pulse Effect */}
           <motion.div
-            className="absolute inset-0 border-2 border-[#04eaff] rounded-2xl"
+            className="absolute inset-0 border-2 border-[#00ff88] rounded-2xl"
             animate={{
               scale: isHovered ? [1, 1.2, 1] : 1,
               opacity: isHovered ? [0.5, 0, 0.5] : 0
@@ -134,7 +134,7 @@ const FloatingTechCard = ({ technology, index }) => {
         }}
         transition={{ duration: 0.2 }}
       >
-        <span className="bg-gradient-to-r from-[#04eaff] to-[#915EFF] bg-clip-text text-transparent font-semibold">
+        <span className="bg-gradient-to-r from-[#00ff88] to-[#ff6b35] bg-clip-text text-transparent font-semibold">
           {technology.name}
         </span>
         <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-gray-800 rotate-45 border-l border-t border-gray-600"></div>
@@ -146,7 +146,7 @@ const FloatingTechCard = ({ technology, index }) => {
           {[...Array(2)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-1 h-1 bg-[#915EFF] rounded-full opacity-30"
+              className="absolute w-1 h-1 bg-[#ff6b35] rounded-full opacity-30"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
@@ -176,9 +176,9 @@ const Tech = () => {
   return (
     <section id="skills" className="relative overflow-hidden">
       {/* Enhanced Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#04eaff]/5 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#00ff88]/5 to-transparent"></div>
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-[#915EFF]/5 via-transparent to-[#04eaff]/5"
+        className="absolute inset-0 bg-gradient-to-br from-[#ff6b35]/5 via-transparent to-[#00ff88]/5"
         animate={{
           opacity: [0.3, 0.6, 0.3],
           scale: [1, 1.05, 1]
@@ -194,7 +194,7 @@ const Tech = () => {
         <motion.div variants={textVariant()}>
           <p className={`${styles.sectionSubText} text-center`}>Technologies I Master</p>
           <h2 className={`${styles.sectionHeadText} text-center mb-4`}>
-            <span className="bg-gradient-to-r from-[#04eaff] to-[#915EFF] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#00ff88] to-[#ff6b35] bg-clip-text text-transparent">
               Skills & Technologies
             </span>
           </h2>
@@ -228,7 +228,7 @@ const Tech = () => {
               {[...Array(8)].map((_, i) => (
                 <motion.div
                   key={i}
-                  className="absolute w-2 h-2 bg-gradient-to-r from-[#04eaff] to-[#915EFF] rounded-full opacity-20"
+                  className="absolute w-2 h-2 bg-gradient-to-r from-[#00ff88] to-[#ff6b35] rounded-full opacity-20"
                   style={{
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
@@ -262,8 +262,8 @@ const Tech = () => {
           <motion.div
             className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-3xl p-8 border border-gray-700 max-w-4xl mx-auto"
             whileHover={{
-              borderColor: "#04eaff",
-              boxShadow: "0 20px 40px rgba(4, 234, 255, 0.1)"
+              borderColor: "#00ff88",
+              boxShadow: "0 20px 40px rgba(0, 255, 136, 0.1)"
             }}
             transition={{ duration: 0.3 }}
           >
@@ -279,9 +279,9 @@ const Tech = () => {
               }}
             >
               Constantly learning and adapting to new technologies to create 
-              <span className="text-[#04eaff] font-semibold"> cutting-edge solutions</span> that 
+              <span className="text-[#00ff88] font-semibold"> cutting-edge solutions</span> that 
               push the boundaries of web development. Each skill represents countless hours of 
-              <span className="text-[#915EFF] font-semibold"> dedication and innovation</span>.
+              <span className="text-[#ff6b35] font-semibold"> dedication and innovation</span>.
             </motion.p>
             
             {/* Skill Categories */}
@@ -296,7 +296,7 @@ const Tech = () => {
                   className="text-center p-4 bg-gray-800/30 rounded-2xl border border-gray-600"
                   whileHover={{ 
                     scale: 1.05,
-                    borderColor: "#04eaff"
+                    borderColor: "#00ff88"
                   }}
                   transition={{ duration: 0.3 }}
                 >
