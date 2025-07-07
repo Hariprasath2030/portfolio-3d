@@ -110,7 +110,7 @@ const CertificationCard = ({ certification, index }) => {
 
         {/* Header */}
         <div className="relative z-10 mb-4">
-          📜 Click the view button to open certificate • Hover for
+          <div className="flex items-center justify-between mb-4">
             <motion.div
               className="p-3 bg-gradient-to-r from-[#00ff88] to-[#ff6b35] rounded-2xl"
               animate={{
@@ -131,7 +131,6 @@ const CertificationCard = ({ certification, index }) => {
             >
               <FaExternalLinkAlt className="text-white text-sm" />
             </motion.button>
-          </div>
 
           <motion.h3
             className="text-white font-bold text-xl mb-2"
