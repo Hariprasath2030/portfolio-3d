@@ -1,10 +1,78 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { FloatingElements } from "./canvas";
+import { FloatingDock } from "./ui/floating-dock";
+import {
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconMail,
+  IconUser,
+  IconCode,
+  IconDownload,
+  IconPhone,
+} from "@tabler/icons-react";
 
 const Hero = () => {
+  const dockLinks = [
+    {
+      title: "About",
+      icon: (
+        <IconUser className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#about",
+    },
+    {
+      title: "Projects",
+      icon: (
+        <IconCode className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#projects",
+    },
+    {
+      title: "Resume",
+      icon: (
+        <IconDownload className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "/HARIPRASATH_R.pdf",
+    },
+    {
+      title: "Portfolio",
+      icon: (
+        <img
+          src="/hari.png"
+          width={20}
+          height={20}
+          alt="Hariprasath Logo"
+          className="rounded-full"
+        />
+      ),
+      href: "#",
+    },
+    {
+      title: "Contact",
+      icon: (
+        <IconMail className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#contact",
+    },
+    {
+      title: "LinkedIn",
+      icon: (
+        <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://linkedin.com/in/hariprasath-r",
+    },
+    {
+      title: "GitHub",
+      icon: (
+        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://github.com/Hariprasath2030",
+    },
+  ];
+
   return (
-    <section className="relative w-full h-[130vh]  mx-auto overflow-hidden">
+    <section className="relative w-full h-[130vh] mx-auto overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent"></div>
@@ -92,6 +160,19 @@ const Hero = () => {
                     Crafting modern, scalable web apps with sleek animations and
                     strong backends.
                   </p>
+                </motion.div>
+
+                {/* Floating Dock */}
+                <motion.div
+                  className="flex justify-center my-8"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.7 }}
+                >
+                  <FloatingDock
+                    mobileClassName="translate-y-0"
+                    items={dockLinks}
+                  />
                 </motion.div>
 
                 {/* CTA Buttons */}
