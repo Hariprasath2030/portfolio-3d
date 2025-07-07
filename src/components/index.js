@@ -8,6 +8,7 @@ import Works from "./Works";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
 import Certifications from "./Certifications";
+import Footer from "./Footer";
 
 export {
   Hero,
@@ -19,6 +20,7 @@ export {
   Contact,
   CanvasLoader,
   Certifications,
+  Footer,
   EarthCanvas, 
   BallCanvas, 
   ComputersCanvas, 
