@@ -25,7 +25,7 @@ const certifications = [
       "JPA/Hibernate",
     ],
     color: "from-green-400 to-blue-500",
-    certificateFile: "Spring.pdf", // Add your certificate file name
+    certificateFile: "Spring.pdf",
   },
   {
     title: "Advanced MERN Stack Development",
@@ -41,7 +41,7 @@ const certifications = [
       "JWT Authentication",
     ],
     color: "from-purple-400 to-pink-500",
-    certificateFile: "Mern.pdf", // Add your certificate file name
+    certificateFile: "Mern.pdf",
   },
   {
     title: "Full Stack Web Development",
@@ -58,7 +58,7 @@ const certifications = [
       "Responsive Design",
     ],
     color: "from-orange-400 to-red-500",
-    certificateFile: "Cognify.pdf", // Add your certificate file name
+    certificateFile: "Cognify.pdf",
   },
   {
     title: "Introduction to DevOps",
@@ -68,7 +68,7 @@ const certifications = [
       "Completed an introductory course on DevOps covering core concepts, tools, and practices essential for continuous integration, deployment, and automation in modern software development.",
     skills: ["DevOps", "CI/CD", "Automation", "Software Development Lifecycle"],
     color: "from-blue-500 to-green-500",
-    certificateFile: "Devops.pdf", // Your uploaded certificate file
+    certificateFile: "Devops.pdf",
   },
 ];
 
@@ -261,7 +261,7 @@ const Certifications = () => {
               repeat: Infinity,
             }}
           >
-            📜 Click the download button to get certificate • Hover for
+            📜 Click the view button to open certificate • Hover for
             interactive experience
           </motion.p>
         </motion.div>
