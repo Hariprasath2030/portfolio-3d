@@ -131,6 +131,7 @@ const CertificationCard = ({ certification, index }) => {
             >
               <FaExternalLinkAlt className="text-white text-sm" />
             </motion.button>
+          </div>
 
           <motion.h3
             className="text-white font-bold text-xl mb-2"
