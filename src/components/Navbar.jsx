@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { navLinks } from "../constants/index.js";
@@ -22,42 +22,42 @@ const Navbar = () => {
 
   const navVariants = {
     hidden: { y: -100, opacity: 0 },
-    visible: { 
-      y: 0, 
+    visible: {
+      y: 0,
       opacity: 1,
-      transition: { duration: 0.6, ease: "easeOut" }
-    }
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
   const linkVariants = {
-    hover: { 
+    hover: {
       scale: 1.1,
       color: "#00ff88",
-      transition: { duration: 0.2 }
-    }
+      transition: { duration: 0.2 },
+    },
   };
 
   const mobileMenuVariants = {
-    hidden: { 
-      opacity: 0,
-      scale: 0.8,
-      y: -20
-    },
-    visible: { 
-      opacity: 1,
-      scale: 1,
-      y: 0,
-      transition: { 
-        duration: 0.3,
-        ease: "easeOut"
-      }
-    },
-    exit: { 
+    hidden: {
       opacity: 0,
       scale: 0.8,
       y: -20,
-      transition: { duration: 0.2 }
-    }
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: {
+        duration: 0.3,
+        ease: "easeOut",
+      },
+    },
+    exit: {
+      opacity: 0,
+      scale: 0.8,
+      y: -20,
+      transition: { duration: 0.2 },
+    },
   };
 
   return (
@@ -65,9 +65,11 @@ const Navbar = () => {
       variants={navVariants}
       initial="hidden"
       animate="visible"
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 transition-all duration-300 ${
-        scrolled 
-          ? "bg-black/90 backdrop-blur-md border-b border-gray-800" 
+      className={`${
+        styles.paddingX
+      } w-full flex items-center py-5 fixed top-0 z-20 transition-all duration-300 ${
+        scrolled
+          ? "bg-black/90 backdrop-blur-md border-b border-gray-800"
           : "bg-transparent"
       }`}
     >
@@ -86,27 +88,28 @@ const Navbar = () => {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <img src={hari} alt="hari" className="w-10 h-10 object-contain rounded-full" />
+            <img
+              src={hari}
+              alt="hari"
+              className="w-10 h-10 object-contain rounded-full"
+            />
             <motion.div
               className="absolute inset-0 rounded-full border-2 border-[#3eff45]"
               animate={{
                 scale: [1, 1.2, 1],
-                opacity: [0.5, 1, 0.5]
+                opacity: [0.5, 1, 0.5],
               }}
               transition={{
                 duration: 2,
                 repeat: Infinity,
-                ease: "easeInOut"
+                ease: "easeInOut",
               }}
             />
           </motion.div>
-          
-          <motion.div
-            whileHover={{ x: 5 }}
-            transition={{ duration: 0.2 }}
-          >
+
+          <motion.div whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
             <p className="text-white text-[18px] font-bold cursor-pointer flex">
-              <span className="text-gray-50 bg-clip-text text-transparent">
+              <span className="text-gray-200 bg-clip-text text-transparent">
                 Hariprasath
               </span>
               <span className="sm:block hidden bg-gradient-to-r from-[#00ff88] to-[#ff6b35] bg-clip-text text-transparent ml-2">
@@ -174,13 +177,15 @@ const Navbar = () => {
                     <motion.li
                       key={nav.id}
                       initial={{ opacity: 0, x: 20 }}
-                      animate={{ 
-                        opacity: 1, 
+                      animate={{
+                        opacity: 1,
                         x: 0,
-                        transition: { delay: index * 0.1 }
+                        transition: { delay: index * 0.1 },
                       }}
                       className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                        active === nav.title ? "text-[#6bff60]" : "text-gray-300"
+                        active === nav.title
+                          ? "text-[#6bff60]"
+                          : "text-gray-300"
                       } hover:text-[#ff8f45b6] transition-colors duration-200 w-full`}
                       onClick={() => {
                         setToggle(false);
