@@ -8,7 +8,6 @@ import {
   FaAward,
   FaExternalLinkAlt,
   FaCalendarAlt,
-  FaDownload,
 } from "react-icons/fa";
 
 const certifications = [
@@ -78,13 +77,8 @@ const CertificationCard = ({ certification, index }) => {
 
   const handleDownloadCertificate = (e) => {
     e.stopPropagation();
-    // Create a link element and trigger download
-    const link = document.createElement("a");
-    link.href = `/certificates/${certification.certificateFile}`;
-    link.download = certification.certificateFile;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Open PDF in new tab instead of downloading
+    window.open(`/certificates/${certification.certificateFile}`, '_blank');
   };
 
   return (
@@ -116,7 +110,7 @@ const CertificationCard = ({ certification, index }) => {
 
         {/* Header */}
         <div className="relative z-10 mb-4">
-          <div className="flex items-start justify-between mb-3">
+          📜 Click the view button to open certificate • Hover for
             <motion.div
               className="p-3 bg-gradient-to-r from-[#00ff88] to-[#ff6b35] rounded-2xl"
               animate={{
@@ -133,9 +127,9 @@ const CertificationCard = ({ certification, index }) => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleDownloadCertificate}
-              title="Download Certificate"
+              title="View Certificate"
             >
-              <FaDownload className="text-white text-sm" />
+              <FaExternalLinkAlt className="text-white text-sm" />
             </motion.button>
           </div>
 

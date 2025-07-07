@@ -8,8 +8,8 @@ import {
   IconMail,
   IconUser,
   IconCode,
-  IconDownload,
-  IconPhone,
+  IconFileText,
+  IconCertificate,
 } from "@tabler/icons-react";
 
 const Hero = () => {
@@ -17,23 +17,30 @@ const Hero = () => {
     {
       title: "About",
       icon: (
-        <IconUser className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconUser className="h-full w-full text-[#00ff88] hover:text-[#ff6b35] transition-colors duration-300" />
       ),
       href: "#about",
     },
     {
       title: "Projects",
       icon: (
-        <IconCode className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconCode className="h-full w-full text-[#00ff88] hover:text-[#ff6b35] transition-colors duration-300" />
       ),
       href: "#projects",
     },
     {
       title: "Resume",
       icon: (
-        <IconDownload className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconFileText className="h-full w-full text-[#00ff88] hover:text-[#ff6b35] transition-colors duration-300" />
       ),
       href: "/HARIPRASATH_R.pdf",
+    },
+    {
+      title: "Certifications",
+      icon: (
+        <IconCertificate className="h-full w-full text-[#00ff88] hover:text-[#ff6b35] transition-colors duration-300" />
+      ),
+      href: "#certifications",
     },
     {
       title: "Portfolio",
@@ -43,7 +50,7 @@ const Hero = () => {
           width={20}
           height={20}
           alt="Hariprasath Logo"
-          className="rounded-full"
+          className="rounded-full border border-[#00ff88] hover:border-[#ff6b35] transition-colors duration-300"
         />
       ),
       href: "#",
@@ -51,21 +58,21 @@ const Hero = () => {
     {
       title: "Contact",
       icon: (
-        <IconMail className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconMail className="h-full w-full text-[#00ff88] hover:text-[#ff6b35] transition-colors duration-300" />
       ),
       href: "#contact",
     },
     {
       title: "LinkedIn",
       icon: (
-        <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconBrandLinkedin className="h-full w-full text-[#00ff88] hover:text-[#ff6b35] transition-colors duration-300" />
       ),
       href: "https://linkedin.com/in/hariprasath-r",
     },
     {
       title: "GitHub",
       icon: (
-        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconBrandGithub className="h-full w-full text-[#00ff88] hover:text-[#ff6b35] transition-colors duration-300" />
       ),
       href: "https://github.com/Hariprasath2030",
     },
@@ -86,6 +93,7 @@ const Hero = () => {
       >
         {/* Main Content Container */}
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+          
           {/* Left Side - Text Content */}
           <div className="flex-1 flex flex-col items-start">
             {/* Animated Line and Dot */}
@@ -162,19 +170,6 @@ const Hero = () => {
                   </p>
                 </motion.div>
 
-                {/* Floating Dock */}
-                <motion.div
-                  className="flex justify-center my-8"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, delay: 0.7 }}
-                >
-                  <FloatingDock
-                    mobileClassName="translate-y-0"
-                    items={dockLinks}
-                  />
-                </motion.div>
-
                 {/* CTA Buttons */}
                 <motion.div
                   className="flex flex-col sm:flex-row gap-4 mt-8"
@@ -210,6 +205,20 @@ const Hero = () => {
                   >
                     Get In Touch
                   </motion.button>
+                </motion.div>
+
+                {/* Floating Dock */}
+                <motion.div
+                  className="flex justify-center sm:justify-start mt-12"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 1.1 }}
+                >
+                  <FloatingDock
+                    mobileClassName="translate-y-0"
+                    desktopClassName="bg-gray-900/30 backdrop-blur-md border border-[#00ff88]/20 hover:border-[#00ff88]/40 transition-all duration-300"
+                    items={dockLinks}
+                  />
                 </motion.div>
               </div>
             </div>

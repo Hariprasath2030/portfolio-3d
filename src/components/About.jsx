@@ -91,13 +91,8 @@ const About = () => {
   ];
 
   const handleDownloadResume = () => {
-    // Create a link element and trigger download
-    const link = document.createElement('a');
-    link.href = '/HARIPRASATH_R.pdf';
-    link.download = 'HARIPRASATH_R.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Open PDF in new tab instead of downloading
+    window.open('/HARIPRASATH_R.pdf', '_blank');
   };
 
   return (
@@ -255,7 +250,7 @@ const About = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <FaDownload className="text-lg" />
-                Download Resume
+                View Resume
                 <motion.div
                   className="w-2 h-2 bg-white rounded-full"
                   animate={{
