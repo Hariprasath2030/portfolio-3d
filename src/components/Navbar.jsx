@@ -109,7 +109,7 @@ const Navbar = () => {
 
           <motion.div whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
             <p className="text-white text-[18px] font-bold cursor-pointer flex">
-              <span className="text-gray-200 bg-clip-text text-transparent">
+              <span className="text-white bg-clip-text text-transparent">
                 Hariprasath
               </span>
               <span className="sm:block hidden bg-gradient-to-r from-[#00ff88] to-[#ff6b35] bg-clip-text text-transparent ml-2">
