@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaHeart } from "react-icons/fa";
 import { fadeIn } from "../utils/motion";
@@ -8,18 +7,18 @@ const Footer = () => {
     {
       title: "Web Development",
       description: "Full-stack web applications",
-      icon: "🌐"
+      icon: "🌐",
     },
     {
-      title: "Mobile Development", 
+      title: "Mobile Development",
       description: "Cross-platform mobile apps",
-      icon: "📱"
+      icon: "📱",
     },
     {
       title: "UI/UX Design",
-      description: "Modern and responsive designs", 
-      icon: "🎨"
-    }
+      description: "Modern and responsive designs",
+      icon: "🎨",
+    },
   ];
 
   const quickLinks = [
@@ -27,31 +26,29 @@ const Footer = () => {
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" }
+    { name: "Contact", href: "#contact" },
   ];
 
   return (
-    <footer className="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#00ff88]/5 via-transparent to-[#ff6b35]/5"></div>
+    <footer className="relative bg-gradient-to-br text-white overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r"></div>
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-[#00ff88]/5 via-transparent to-[#ff6b35]/5"
+        className="absolute inset-0 bg-gradient-to-br"
         animate={{
           opacity: [0.3, 0.6, 0.3],
-          scale: [1, 1.02, 1]
+          scale: [1, 1.02, 1],
         }}
         transition={{
           duration: 8,
           repeat: Infinity,
-          ease: "easeInOut"
+          ease: "easeInOut",
         }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-16">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          
-          {/* Profile Section */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        {/* Top Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+          {/* About Section */}
           <motion.div
             variants={fadeIn("up", "spring", 0.1, 0.6)}
             initial="hidden"
@@ -59,56 +56,61 @@ const Footer = () => {
             viewport={{ once: true }}
             className="lg:col-span-2"
           >
-            <motion.h3 
+            <motion.h3
               className="text-3xl font-bold mb-4"
               animate={{
-                backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+                backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
               }}
               transition={{
                 duration: 5,
                 repeat: Infinity,
-                ease: "linear"
+                ease: "linear",
               }}
             >
               <span className="bg-gradient-to-r from-[#00ff88] to-[#ff6b35] bg-clip-text text-transparent">
-                Bhupesh Patil
+                Hari Prasath
               </span>
             </motion.h3>
-            <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-              Computer Engineer specializing in full-stack development with expertise in 
-              <span className="text-[#00ff88] font-semibold"> MERN stack</span> and 
-              <span className="text-[#ff6b35] font-semibold"> DSA problem solving</span>. 
-              Passionate about creating innovative solutions.
+            <p className="text-gray-300 text-base sm:text-lg mb-6 leading-relaxed">
+              Passionate Information Technology professional with a strong focus
+              on full-stack development, specializing in the
+              <span className="text-[#00ff88] font-semibold">
+                {" "}
+                MERN stack Development
+              </span>
+              , dedicated to building scalable, high-performance applications
+              and delivering innovative tech solutions.
             </p>
-
-            {/* Contact Info */}
-            <div className="space-y-3">
-              <motion.div 
+            <div className="space-y-3 text-sm sm:text-base">
+              <motion.div
                 className="flex items-center gap-3 text-gray-300 hover:text-[#00ff88] transition-colors duration-300"
                 whileHover={{ x: 5 }}
               >
                 <FaEnvelope className="text-[#00ff88]" />
-                <a href="mailto:bhupeshsabe123@gmail.com" className="hover:underline">
-                  bhupeshsabe123@gmail.com
+                <a
+                  href="mailto:officialhari2030@gmail.com"
+                  className="hover:underline"
+                >
+                  officialhari2030@gmail.com
                 </a>
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 className="flex items-center gap-3 text-gray-300 hover:text-[#00ff88] transition-colors duration-300"
                 whileHover={{ x: 5 }}
               >
                 <FaPhone className="text-[#00ff88]" />
-                <a href="tel:+919404307254" className="hover:underline">
-                  +91 9404307254
+                <a href="tel:+918925425514" className="hover:underline">
+                  +91 8925425514
                 </a>
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 className="flex items-center gap-3 text-gray-300"
                 whileHover={{ x: 5 }}
               >
                 <FaMapMarkerAlt className="text-[#00ff88]" />
-                <span>Dhule, Maharashtra, India</span>
+                <span>Tirupattur, Tamil Nadu, India</span>
               </motion.div>
             </div>
           </motion.div>
@@ -120,15 +122,17 @@ const Footer = () => {
             whileInView="show"
             viewport={{ once: true }}
           >
-            <h4 className="text-xl font-bold mb-6 text-[#00ff88]">Quick Links</h4>
-            <ul className="space-y-3">
-              {quickLinks.map((link, index) => (
-                <motion.li 
+            <h4 className="text-xl font-bold mb-6 text-[#00ff88]">
+              Quick Links
+            </h4>
+            <ul className="space-y-3 text-sm sm:text-base">
+              {quickLinks.map((link) => (
+                <motion.li
                   key={link.name}
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <a 
+                  <a
                     href={link.href}
                     className="text-gray-300 hover:text-[#ff6b35] transition-colors duration-300 flex items-center gap-2"
                   >
@@ -149,7 +153,7 @@ const Footer = () => {
           >
             <h4 className="text-xl font-bold mb-6 text-[#00ff88]">Services</h4>
             <div className="space-y-4">
-              {services.map((service, index) => (
+              {services.map((service) => (
                 <motion.div
                   key={service.title}
                   className="group cursor-pointer"
@@ -157,7 +161,7 @@ const Footer = () => {
                   transition={{ duration: 0.2 }}
                 >
                   <div className="flex items-start gap-3 p-3 rounded-lg bg-gray-800/30 hover:bg-gray-800/50 transition-all duration-300 border border-gray-700 hover:border-[#00ff88]/30">
-                    <span className="text-2xl">{service.icon}</span>
+                    <span className="text-xl sm:text-2xl">{service.icon}</span>
                     <div>
                       <h5 className="font-semibold text-white group-hover:text-[#00ff88] transition-colors duration-300">
                         {service.title}
@@ -183,51 +187,53 @@ const Footer = () => {
         />
 
         {/* Bottom Section */}
-        <motion.div
-          variants={fadeIn("up", "spring", 0.4, 0.6)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="flex flex-col md:flex-row justify-between items-center gap-4"
-        >
-          <motion.p 
-            className="text-gray-400 text-center md:text-left flex items-center gap-2"
-            animate={{
-              opacity: [0.7, 1, 0.7]
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
+        <div className="w-full px-6 md:px-12 lg:px-20 py-6">
+          <motion.div
+            variants={fadeIn("up", "spring", 0.4, 0.6)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="flex flex-col md:flex-row justify-between items-center gap-4 text-center"
           >
-            © 2025 Bhupesh Patil. All rights reserved.
-          </motion.p>
-          
-          <motion.p 
-            className="text-gray-400 text-center md:text-right flex items-center gap-2"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
-          >
-            Built with 
-            <motion.span
+            <motion.p
+              className="text-sm text-gray-400 flex items-center justify-center gap-2"
               animate={{
-                scale: [1, 1.2, 1],
-                color: ["#ff6b35", "#00ff88", "#ff6b35"]
+                opacity: [0.7, 1, 0.7],
               }}
               transition={{
-                duration: 2,
+                duration: 3,
                 repeat: Infinity,
-                ease: "easeInOut"
+                ease: "easeInOut",
               }}
             >
-              <FaHeart className="text-red-500" />
-            </motion.span>
-            using React & Framer Motion
-          </motion.p>
-        </motion.div>
+              © 2025 Hari Prasath. All rights reserved.
+            </motion.p>
 
-        {/* Floating Elements */}
+            <motion.p
+              className="text-sm text-gray-400 flex items-center justify-center gap-2"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            >
+              Built with
+              <motion.span
+                animate={{
+                  scale: [1, 1.2, 1],
+                  color: ["#ff6b35", "#00ff88", "#ff6b35"],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                <FaHeart className="text-red-500" />
+              </motion.span>
+              using React & Framer Motion
+            </motion.p>
+          </motion.div>
+        </div>
+
+        {/* Floating Decorative Elements */}
         {[...Array(6)].map((_, i) => (
           <motion.div
             key={i}
@@ -239,13 +245,13 @@ const Footer = () => {
             animate={{
               y: [0, -30, 0],
               opacity: [0.2, 0.6, 0.2],
-              scale: [0.5, 1, 0.5]
+              scale: [0.5, 1, 0.5],
             }}
             transition={{
               duration: 4 + Math.random() * 2,
               repeat: Infinity,
               delay: i * 0.5,
-              ease: "easeInOut"
+              ease: "easeInOut",
             }}
           />
         ))}

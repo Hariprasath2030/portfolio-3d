@@ -2,66 +2,10 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { FloatingElements } from "./canvas";
 import { FloatingDock } from "./ui/floating-dock";
-import {
-  IconBrandGithub,
-  IconBrandLinkedin,
-  IconMail,
-  IconUser,
-  IconCode,
-  IconFileText,
-  IconCertificate,
-} from "@tabler/icons-react";
+import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
 
 const Hero = () => {
   const dockLinks = [
-    {
-      title: "About",
-      icon: (
-        <IconUser className="h-full w-full text-[#00ff88] hover:text-[#ff6b35] transition-colors duration-300" />
-      ),
-      href: "#about",
-    },
-    {
-      title: "Projects",
-      icon: (
-        <IconCode className="h-full w-full text-[#00ff88] hover:text-[#ff6b35] transition-colors duration-300" />
-      ),
-      href: "#projects",
-    },
-    {
-      title: "Resume",
-      icon: (
-        <IconFileText className="h-full w-full text-[#00ff88] hover:text-[#ff6b35] transition-colors duration-300" />
-      ),
-      href: "/HARIPRASATH_R.pdf",
-    },
-    {
-      title: "Certifications",
-      icon: (
-        <IconCertificate className="h-full w-full text-[#00ff88] hover:text-[#ff6b35] transition-colors duration-300" />
-      ),
-      href: "#certifications",
-    },
-    {
-      title: "Portfolio",
-      icon: (
-        <img
-          src="/hari.png"
-          width={20}
-          height={20}
-          alt="Hariprasath Logo"
-          className="rounded-full border border-[#00ff88] hover:border-[#ff6b35] transition-colors duration-300"
-        />
-      ),
-      href: "#",
-    },
-    {
-      title: "Contact",
-      icon: (
-        <IconMail className="h-full w-full text-[#00ff88] hover:text-[#ff6b35] transition-colors duration-300" />
-      ),
-      href: "#contact",
-    },
     {
       title: "LinkedIn",
       icon: (
@@ -79,24 +23,16 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative w-full h-[130vh] mx-auto overflow-hidden">
-      {/* Animated Background */}
+    <section className="relative w-full h-[140vh] mx-auto overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent"></div>
       </div>
-      {/* Floating 3D Elements */}
       <FloatingElements />
-
-      {/* Hero Content */}
       <div
-        className={`absolute inset-0 top-[25px] max-w-7xl mx-auto ${styles.paddingX} flex flex-col justify-center z-10`}
+        className={`absolute inset-0 top-[50px] max-w-7xl mx-auto ${styles.paddingX} flex flex-col justify-center z-10`}
       >
-        {/* Main Content Container */}
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-          
-          {/* Left Side - Text Content */}
           <div className="flex-1 flex flex-col items-start">
-            {/* Animated Line and Dot */}
             <div className="flex items-start gap-5">
               <div className="flex flex-col justify-center items-center mt-5">
                 <motion.div
@@ -122,8 +58,6 @@ const Hero = () => {
                   transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
                 />
               </div>
-
-              {/* Text Content */}
               <div className="flex-1">
                 <motion.div
                   initial={{ opacity: 0, y: 50 }}
@@ -207,7 +141,6 @@ const Hero = () => {
                   </motion.button>
                 </motion.div>
 
-                {/* Floating Dock */}
                 <motion.div
                   className="flex justify-center sm:justify-start mt-12"
                   initial={{ opacity: 0, y: 30 }}
@@ -223,8 +156,6 @@ const Hero = () => {
               </div>
             </div>
           </div>
-
-          {/* Right Side - Interactive 3D Card */}
           <motion.div
             className="flex-1 flex justify-center items-center"
             initial={{ opacity: 0, x: 100 }}
@@ -242,7 +173,6 @@ const Hero = () => {
                 ease: "linear",
               }}
             >
-              {/* 3D Card */}
               <motion.div
                 className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl shadow-2xl border border-gray-700"
                 style={{
@@ -254,7 +184,6 @@ const Hero = () => {
                 }}
                 transition={{ duration: 0.3 }}
               >
-                {/* Card Content */}
                 <div className="absolute inset-4 bg-gradient-to-br from-[#00ff88]/10 to-[#ff6b35]/10 rounded-2xl p-6 flex flex-col justify-center items-center text-center">
                   <motion.div
                     className="w-20 h-20 bg-gradient-to-r from-[#00ff88] to-[#ff6b35] rounded-full mb-4 flex items-center justify-center"
