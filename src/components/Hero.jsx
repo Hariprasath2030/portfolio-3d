@@ -2,23 +2,44 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { FloatingElements } from "./canvas";
 import { FloatingDock } from "./ui/floating-dock";
-import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
+import { IconBrandGithub, IconBrandLinkedin, IconBrandInstagram, IconBrandTwitter, IconCode } from "@tabler/icons-react";
 
 const Hero = () => {
   const dockLinks = [
     {
       title: "LinkedIn",
       icon: (
-        <IconBrandLinkedin className="h-full w-full text-[#00ff88] hover:text-[#ff6b35] transition-colors duration-300" />
+        <IconBrandLinkedin className="h-full w-full text-[#0077b5] hover:text-[#00ff88] transition-all duration-500 hover:scale-110" />
       ),
       href: "https://linkedin.com/in/hariprasath-r",
     },
     {
       title: "GitHub",
       icon: (
-        <IconBrandGithub className="h-full w-full text-[#00ff88] hover:text-[#ff6b35] transition-colors duration-300" />
+        <IconBrandGithub className="h-full w-full text-white hover:text-[#00ff88] transition-all duration-500 hover:scale-110 hover:rotate-12" />
       ),
       href: "https://github.com/Hariprasath2030",
+    },
+    {
+      title: "Instagram",
+      icon: (
+        <IconBrandInstagram className="h-full w-full text-[#e4405f] hover:text-[#ff6b35] transition-all duration-500 hover:scale-110 hover:rotate-[-12deg]" />
+      ),
+      href: "https://instagram.com/hariprasath2030",
+    },
+    {
+      title: "Twitter",
+      icon: (
+        <IconBrandTwitter className="h-full w-full text-[#1da1f2] hover:text-[#00ff88] transition-all duration-500 hover:scale-110 hover:rotate-6" />
+      ),
+      href: "https://twitter.com/hariprasath2030",
+    },
+    {
+      title: "LeetCode",
+      icon: (
+        <IconCode className="h-full w-full text-[#ffa116] hover:text-[#ff6b35] transition-all duration-500 hover:scale-110 hover:rotate-[-6deg]" />
+      ),
+      href: "https://leetcode.com/hariprasath2030",
     },
   ];
 
