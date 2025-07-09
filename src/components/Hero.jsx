@@ -2,7 +2,13 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { FloatingElements } from "./canvas";
 import { FloatingDock } from "./ui/floating-dock";
-import { IconBrandGithub, IconBrandLinkedin, IconBrandInstagram, IconBrandTwitter, IconCode } from "@tabler/icons-react";
+import {
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconBrandInstagram,
+  IconBrandTwitter,
+  IconCode,
+} from "@tabler/icons-react";
 
 const Hero = () => {
   const dockLinks = [
@@ -11,7 +17,7 @@ const Hero = () => {
       icon: (
         <IconBrandLinkedin className="h-full w-full text-[#0077b5] hover:text-[#00ff88] transition-all duration-500 hover:scale-110" />
       ),
-      href: "https://linkedin.com/in/hariprasath-r",
+      href: "https://www.linkedin.com/in/hariprasath-v-ab5006276",
     },
     {
       title: "GitHub",
@@ -25,34 +31,34 @@ const Hero = () => {
       icon: (
         <IconBrandInstagram className="h-full w-full text-[#e4405f] hover:text-[#ff6b35] transition-all duration-500 hover:scale-110 hover:rotate-[-12deg]" />
       ),
-      href: "https://instagram.com/hariprasath2030",
+      href: "https://www.instagram.com/hearty_soul_016?igsh=MTNoNWFjdXp0MzN6Ng==",
     },
     {
       title: "Twitter",
       icon: (
         <IconBrandTwitter className="h-full w-full text-[#1da1f2] hover:text-[#00ff88] transition-all duration-500 hover:scale-110 hover:rotate-6" />
       ),
-      href: "https://twitter.com/hariprasath2030",
+      href: "https://x.com/Hariprasat67463?t=pBW9m_AzJkdc5RXmVmPbiw&s=09",
     },
     {
       title: "LeetCode",
       icon: (
         <IconCode className="h-full w-full text-[#ffa116] hover:text-[#ff6b35] transition-all duration-500 hover:scale-110 hover:rotate-[-6deg]" />
       ),
-      href: "https://leetcode.com/hariprasath2030",
+      href: "https://leetcode.com/u/hariprasath2030/",
     },
   ];
 
   return (
-    <section className="relative w-full h-[140vh] mx-auto overflow-hidden">
+    <section className="relative w-full h-[150vh] mx-auto overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent"></div>
       </div>
       <FloatingElements />
       <div
-        className={`absolute inset-0 top-[50px] max-w-7xl mx-auto ${styles.paddingX} flex flex-col justify-center z-10`}
+        className={`absolute inset-0 top-[100px] max-w-7xl mx-auto ${styles.paddingX} flex flex-col justify-center z-10`}
       >
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-20">
           <div className="flex-1 flex flex-col items-start">
             <div className="flex items-start gap-5">
               <div className="flex flex-col justify-center items-center mt-5">
@@ -169,7 +175,7 @@ const Hero = () => {
                   transition={{ duration: 1, delay: 1.1 }}
                 >
                   <FloatingDock
-                    mobileClassName="translate-y-0"
+                    mobileClassName="translate-y-10 -translate-x-5"
                     desktopClassName="bg-gray-900/30 backdrop-blur-md border border-[#00ff88]/20 hover:border-[#00ff88]/40 transition-all duration-300"
                     items={dockLinks}
                   />

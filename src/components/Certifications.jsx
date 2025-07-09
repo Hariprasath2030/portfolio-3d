@@ -123,7 +123,7 @@ const CertificationCard = ({ certification, index }) => {
             </motion.div>
 
             <motion.button
-              className="p-2 bg-gray-700 rounded-full hover:bg-[#00ff88] transition-colors duration-300"
+              className="p-4 bg-gray-700 rounded-full hover:bg-[#00ff88] transition-colors duration-300"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleDownloadCertificate}
