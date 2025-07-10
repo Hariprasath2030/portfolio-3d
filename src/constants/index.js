@@ -18,7 +18,6 @@ import {
   jobit,
   threejs,
   java,
-  mern,
   mysql,
   smartretail,
   budgetbloom,

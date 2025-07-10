@@ -50,13 +50,13 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative w-full h-[150vh] mx-auto overflow-hidden">
+    <section className="relative w-full h-[140vh] mx-auto overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent"></div>
       </div>
       <FloatingElements />
       <div
-        className={`absolute inset-0 top-[100px] max-w-7xl mx-auto ${styles.paddingX} flex flex-col justify-center z-10`}
+        className={`absolute inset-0 top-[50px] max-w-7xl mx-auto ${styles.paddingX} flex flex-col justify-center z-10`}
       >
         <div className="flex flex-col lg:flex-row items-center justify-between gap-20">
           <div className="flex-1 flex flex-col items-start">
